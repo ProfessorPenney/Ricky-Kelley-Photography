@@ -15,7 +15,7 @@ body {
 
 .nav {
   position: absolute;
-  top: 5%;
+  top: 0;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -29,6 +29,9 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.384)), to(rgba(110, 110, 110, 0)));
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.384), rgba(110, 110, 110, 0));
+  padding-top: 3%;
 }
 
 .nav li {
@@ -84,8 +87,8 @@ body {
           align-items: center;
   background-position: center;
   background-size: cover;
-  -webkit-transition: background-image 1s;
-  transition: background-image 1s;
+  -webkit-transition: background-image 1s linear;
+  transition: background-image 1s linear;
 }
 
 .index h1 {
@@ -144,8 +147,17 @@ body {
   background-image: url("./IMG/landscapes/Spring Blossoms 2.jpg");
 }
 
+.portfolio {
+  margin: 0;
+  padding-bottom: 10%;
+}
+
 .portfolio h1 {
+  margin-top: 0;
+  padding-top: 8%;
+  padding-bottom: 6%;
   text-align: center;
+  font-size: 60px;
 }
 
 .portfolio h2 {
@@ -154,7 +166,7 @@ body {
 }
 
 .portfolio .photo-grid {
-  margin: 20px 10% 100px;
+  margin: 20px 10% 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -169,6 +181,7 @@ body {
 }
 
 .portfolio .photo-grid img {
+  cursor: pointer;
   width: 260px;
   height: 260px;
   margin: 10px;
