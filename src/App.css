@@ -38,6 +38,7 @@ body {
   transition: -webkit-transform 30ms;
   transition: transform 30ms;
   transition: transform 30ms, -webkit-transform 30ms;
+  cursor: pointer;
 }
 
 .nav li hr {
@@ -51,14 +52,7 @@ body {
   border-radius: 2px;
 }
 
-.nav li .mouseover-link {
-  opacity: 1;
-  width: 100%;
-  -webkit-transition: opacity 200ms linear;
-  transition: opacity 200ms linear;
-}
-
-.nav li .mouseover-link-grow {
+.nav li:hover hr {
   opacity: 1;
   width: 100%;
   -webkit-transition: opacity 100ms linear, width 300ms ease-in-out;
@@ -75,7 +69,6 @@ body {
   text-align: center;
   height: 100vh;
   width: 100%;
-  background-image: url("./IMG/pexels-leonardo-cardozo-galves-1830433.jpg");
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -91,6 +84,8 @@ body {
           align-items: center;
   background-position: center;
   background-size: cover;
+  -webkit-transition: background-image 1s;
+  transition: background-image 1s;
 }
 
 .index h1 {
@@ -123,6 +118,30 @@ body {
   transition: all 1000ms;
   opacity: 1;
   top: -30vh;
+}
+
+.background0 {
+  background-image: url("./IMG/landscapes/Beach Sunset.jpg");
+}
+
+.background1 {
+  background-image: url("./IMG/landscapes/IMG_9469 (2).JPG");
+}
+
+.background2 {
+  background-image: url("./IMG/landscapes/IMG_9698 Diff NEW.jpg");
+}
+
+.background3 {
+  background-image: url("./IMG/landscapes/Mt Burdell Sunset.JPG");
+}
+
+.background4 {
+  background-image: url("./IMG/landscapes/IMG_9531 Diff.jpg");
+}
+
+.background5 {
+  background-image: url("./IMG/landscapes/Spring Blossoms 2.jpg");
 }
 
 .portfolio h1 {

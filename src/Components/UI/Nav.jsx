@@ -1,51 +1,40 @@
-import React, { useState } from 'react'
-import { Link, useHistory } from 'react-router-dom'
+import React from 'react'
+import { useHistory } from 'react-router-dom'
 
 const Nav = () => {
-   const [hoverPort, sethoverPort] = useState(false)
-   const [hoverAbout, sethoverAbout] = useState(false)
-   const [hoverCont, sethoverCont] = useState(false)
-   const [hoverTest, sethoverTest] = useState(false)
-   const [animate, setanimate] = useState(false)
-
    const history = useHistory()
 
-   const handleMouseDown = () => {
-      setanimate(true)
+   const handleMouseDown = e => {
+      e.target.className = 'animate'
       setTimeout(() => {
-         setanimate(false)
+         e.target.className = ''
       }, 100)
    }
 
-   const handleMouseUp = () => {
-      setanimate(false)
+   const handleMouseUp = e => {
+      e.target.className = ''
       setTimeout(() => {
-         history.push('/portfolio')
+         history.push(`/${e.target.textContent.toLowerCase()}`)
       }, 20)
    }
 
    return (
       <nav className='nav'>
-         <li
-            className={animate ? 'animate' : ''}
-            onMouseEnter={() => sethoverPort(true)}
-            onMouseLeave={() => sethoverPort(false)}
-            onMouseDown={handleMouseDown}
-            onMouseUp={handleMouseUp}>
+         <li onMouseDown={e => handleMouseDown(e)} onMouseUp={e => handleMouseUp(e)}>
             Portfolio
-            <hr className={hoverPort ? 'mouseover-link-grow' : ''} />
+            <hr />
          </li>
-         <li onMouseEnter={() => sethoverAbout(true)} onMouseLeave={() => sethoverAbout(false)}>
-            <Link to='/about'>About</Link>
-            <hr className={hoverAbout ? 'mouseover-link-grow' : ''} />
+         <li onMouseDown={e => handleMouseDown(e)} onMouseUp={e => handleMouseUp(e)}>
+            About
+            <hr />
          </li>
-         <li onMouseEnter={() => sethoverCont(true)} onMouseLeave={() => sethoverCont(false)}>
-            <Link to='/contact'>Contact</Link>
-            <hr className={hoverCont ? 'mouseover-link-grow' : ''} />
+         <li onMouseDown={e => handleMouseDown(e)} onMouseUp={e => handleMouseUp(e)}>
+            Contact
+            <hr />
          </li>
-         <li onMouseEnter={() => sethoverTest(true)} onMouseLeave={() => sethoverTest(false)}>
-            <Link to='/testimonials'>And maaaaaybe Testimonials</Link>
-            <hr className={hoverTest ? 'mouseover-link-grow' : ''} />
+         <li onMouseDown={e => handleMouseDown(e)} onMouseUp={e => handleMouseUp(e)}>
+            Testimonials
+            <hr />
          </li>
       </nav>
    )
