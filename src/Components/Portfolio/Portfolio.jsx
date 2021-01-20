@@ -5,20 +5,31 @@ const Portfolio = () => {
    const [bigPic, setBigPic] = useState(false)
 
    const showPic = e => {
-      const index = e.target.dataset.id
-      setBigPic(images[index].full)
+      setBigPic(+e.target.dataset.id)
+   }
+
+   const scrollRight = e => {
+      e.stopPropagation()
+      if (bigPic === images.length) setBigPic(1)
+      else setBigPic(prevPic => prevPic + 1)
+   }
+
+   const scrollLeft = e => {
+      e.stopPropagation()
+      if (bigPic === 1) setBigPic(images.length)
+      else setBigPic(prevPic => prevPic - 1)
    }
 
    return (
       <div className='portfolio'>
          {bigPic && (
             <div className='bigImage' onClick={() => setBigPic(false)}>
-               <div className='left arrow'>
+               <div className='left arrow' onClick={e => scrollLeft(e)}>
                   <hr className='top' />
                   <hr className='bottom' />
                </div>
-               <img src={bigPic}></img>
-               <div className='right arrow'>
+               <img src={images[bigPic - 1].full}></img>
+               <div className='right arrow' onClick={e => scrollRight(e)}>
                   <hr className='top' />
                   <hr className='bottom' />
                </div>
@@ -34,7 +45,7 @@ const Portfolio = () => {
                   title={img.title}
                   alt='Portfolio Picture'
                   data-full={img.full}
-                  data-id={img.id - 1}
+                  data-id={img.id}
                />
             ))}
          </div>
