@@ -29,6 +29,16 @@ const Index = () => {
             </h1>
             {/* <h2>takes drippy photos</h2> */}
          </header>
+         <div className='preload' style={{ display: 'none' }}>
+            <img src={require('../../IMG/landscapes/IMG_9469 (2).JPG').default} alt='' />
+            <img src={require('../../IMG/landscapes/IMG_9531 Diff.jpg').default} alt='' />
+            <img src={require('../../IMG/landscapes/IMG_9698 Diff NEW.jpg').default} alt='' />
+            <img
+               src={require('../../IMG/landscapes/Mt Burdell (Diff Aspect).jpg').default}
+               alt=''
+            />
+            <img src={require('../../IMG/landscapes/Spring Blossoms 2.jpg').default} alt='' />
+         </div>
       </div>
    )
 }

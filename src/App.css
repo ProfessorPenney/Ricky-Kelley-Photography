@@ -136,7 +136,7 @@ body {
 }
 
 .background3 {
-  background-image: url("./IMG/landscapes/Mt Burdell Sunset.JPG");
+  background-image: url("./IMG/landscapes/Mt Burdell (Diff Aspect).jpg");
 }
 
 .background4 {
@@ -150,6 +150,90 @@ body {
 .portfolio {
   margin: 0;
   padding-bottom: 10%;
+}
+
+.portfolio .bigImage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  z-index: 1;
+  margin: 4vh 2%;
+  left: 0;
+  top: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(0, 0, 0, 0.39);
+  width: 96%;
+  height: 92vh;
+}
+
+.portfolio .bigImage img {
+  max-width: 100%;
+  max-height: 100%;
+  border: 4px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.portfolio .bigImage .arrow {
+  position: fixed;
+  margin: 0 40px;
+  border-radius: 4px;
+  border: 2px solid transparent;
+  padding: 8px 12px;
+}
+
+.portfolio .bigImage .arrow hr {
+  height: 8px;
+  border-radius: 10px;
+  width: 30px;
+  background-color: #acacac;
+  border: none;
+}
+
+.portfolio .bigImage .arrow:hover {
+  border: 2px solid #dfdfdf;
+}
+
+.portfolio .bigImage .arrow:hover hr {
+  background-color: #dfdfdf;
+}
+
+.portfolio .bigImage .left {
+  left: 5%;
+}
+
+.portfolio .bigImage .left .bottom {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.portfolio .bigImage .left .top {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.portfolio .bigImage .right {
+  right: 5%;
+}
+
+.portfolio .bigImage .right .bottom {
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+.portfolio .bigImage .right .top {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .portfolio h1 {
