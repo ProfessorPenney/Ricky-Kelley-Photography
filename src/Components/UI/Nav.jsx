@@ -32,10 +32,10 @@ const Nav = () => {
             Contact
             <hr />
          </li>
-         <li onMouseDown={e => handleMouseDown(e)} onMouseUp={e => handleMouseUp(e)}>
+         {/* <li onMouseDown={e => handleMouseDown(e)} onMouseUp={e => handleMouseUp(e)}>
             Testimonials
             <hr />
-         </li>
+         </li> */}
       </nav>
    )
 }
