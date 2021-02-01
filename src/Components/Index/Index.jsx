@@ -23,11 +23,13 @@ const Index = () => {
       <div className={`index background${picIndex}`}>
          <Nav />
          <header>
-            <img src={ricky} className={showRicky ? 'showRicky' : ''} alt='photographer' />
-            <h1 onMouseEnter={() => setshowRicky(true)} onMouseLeave={() => setshowRicky(false)}>
-               Ricky Kelley Photography
+            <h1>
+               <span>Ricky Kelle</span>y
             </h1>
-            {/* <h2>takes drippy photos</h2> */}
+            <hr />
+            <h1>
+               <span>Photograph</span>y
+            </h1>
          </header>
          <div className='preload' style={{ display: 'none' }}>
             <img src={require('../../IMG/landscapes/IMG_9469 (2).JPG').default} alt='' />

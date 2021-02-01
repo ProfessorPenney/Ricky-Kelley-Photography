@@ -26,13 +26,32 @@ body {
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
   list-style-type: none;
-  color: white;
+  color: #2c2c2c;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.384)), to(rgba(110, 110, 110, 0)));
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.384), rgba(110, 110, 110, 0));
-  padding-top: 3%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 5vh;
+  text-align: center;
+}
+
+.nav .logo {
+  position: absolute;
+  left: 2%;
+  top: 2vh;
+}
+
+.nav .logo p {
+  margin: 0;
+}
+
+.nav .logo hr {
+  border: none;
+  height: 2px;
+  background-color: #2c2c2c;
+  margin: 4px 0;
 }
 
 .nav li {
@@ -50,10 +69,11 @@ body {
   opacity: 0;
   -webkit-transition: opacity 400ms linear, width 1ms linear 400ms;
   transition: opacity 400ms linear, width 1ms linear 400ms;
-  background-color: white;
+  background-color: #2c2c2c;
   height: 3px;
   border: none;
   border-radius: 2px;
+  margin-bottom: 0;
 }
 
 .nav li:hover hr {
@@ -93,13 +113,18 @@ body {
   transition: background-image 1s linear;
 }
 
-.index h1 {
-  font-size: 80px;
-  margin: 0;
+.index .nav {
+  color: white;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.384)), to(rgba(110, 110, 110, 0)));
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.384), rgba(110, 110, 110, 0));
 }
 
-.index h2 {
-  margin: 0;
+.index .nav .logo {
+  display: none;
+}
+
+.index .nav hr {
+  background-color: white;
 }
 
 .index header {
@@ -107,22 +132,19 @@ body {
   z-index: 2;
 }
 
-.index header img {
-  position: absolute;
-  height: 40vh;
-  top: 0;
-  opacity: 0;
-  z-index: -1;
-  right: 20%;
-  -webkit-transition: all 1000ms, opacity 400ms;
-  transition: all 1000ms, opacity 400ms;
+.index header h1 {
+  font-size: 80px;
+  margin: 0;
 }
 
-.index header .showRicky {
-  -webkit-transition: all 1000ms;
-  transition: all 1000ms;
-  opacity: 1;
-  top: -30vh;
+.index header h1 span {
+  letter-spacing: 0.5em;
+}
+
+.index header hr {
+  border: none;
+  height: 4px;
+  background-color: white;
 }
 
 .background0 {
@@ -153,15 +175,6 @@ body {
   margin: auto;
   max-width: 1250px;
   padding-bottom: 10%;
-}
-
-.portfolio .nav {
-  color: #2c2c2c;
-  background-image: none;
-}
-
-.portfolio .nav li hr {
-  background-color: #2c2c2c;
 }
 
 .portfolio .nav li:nth-of-type(1) hr {
@@ -332,15 +345,6 @@ body {
 
 .contact {
   text-align: center;
-}
-
-.contact .nav {
-  color: black;
-  background-image: none;
-}
-
-.contact .nav li hr {
-  background-color: black;
 }
 
 .contact .nav li:nth-of-type(3) hr {

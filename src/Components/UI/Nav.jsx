@@ -20,6 +20,13 @@ const Nav = () => {
 
    return (
       <nav className='nav'>
+         <a href='/' title='Home'>
+            <div className='logo'>
+               <p>Ricky Kelley</p>
+               <hr />
+               <p>Photography</p>
+            </div>
+         </a>
          <li onMouseDown={e => handleMouseDown(e)} onMouseUp={e => handleMouseUp(e)}>
             Portfolio
             <hr />
