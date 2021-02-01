@@ -32,7 +32,7 @@ const Portfolio = () => {
                   <hr className='bottom' />
                </div>
                {/* <div className='img-div'> */}
-               <img src={images[bigPic - 1].full} />
+               <img src={images[bigPic - 1].full} alt='portfolio pic' />
                {/* <div className='close-pic2'>
                      <hr />
                      <hr />
