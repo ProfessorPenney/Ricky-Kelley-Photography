@@ -1,9 +1,12 @@
 import React from 'react'
+import Nav from '../UI/Nav'
 
 const Contact = () => {
    return (
-      <div>
-         <h1>Here's my number, baby</h1>
+      <div className='contact'>
+         <Nav />
+         <h1>Contact</h1>
+         <p>Email: RickyKelleyPhotography@gmail.com</p>
       </div>
    )
 }
