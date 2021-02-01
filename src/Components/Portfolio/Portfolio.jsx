@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import images from './images.js'
+import Nav from '../UI/Nav'
 
 const Portfolio = () => {
    const [bigPic, setBigPic] = useState(false)
@@ -22,6 +23,8 @@ const Portfolio = () => {
 
    return (
       <div className='portfolio'>
+         <Nav />
+         <h1>Portfolio</h1>
          {bigPic && (
             <div className='bigImage' onClick={() => setBigPic(false)}>
                <div className='left arrow' onClick={e => scrollLeft(e)}>
@@ -35,7 +38,6 @@ const Portfolio = () => {
                </div>
             </div>
          )}
-         <h1>Portfolio</h1>
          <div className='photo-grid'>
             {images.map(img => (
                <img
