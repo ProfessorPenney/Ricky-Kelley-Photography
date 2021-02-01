@@ -31,10 +31,20 @@ const Portfolio = () => {
                   <hr className='top' />
                   <hr className='bottom' />
                </div>
-               <img src={images[bigPic - 1].full}></img>
+               {/* <div className='img-div'> */}
+               <img src={images[bigPic - 1].full} />
+               {/* <div className='close-pic2'>
+                     <hr />
+                     <hr />
+                  </div> */}
+               {/* </div> */}
                <div className='right arrow' onClick={e => scrollRight(e)}>
                   <hr className='top' />
                   <hr className='bottom' />
+               </div>
+               <div className='close-pic1'>
+                  <hr />
+                  <hr />
                </div>
             </div>
          )}
