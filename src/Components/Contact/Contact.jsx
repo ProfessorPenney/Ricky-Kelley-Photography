@@ -5,7 +5,7 @@ const Contact = () => {
    return (
       <div className='contact'>
          <Nav />
-         <h1>Contact</h1>
+         <h2>Contact</h2>
          <p>Email: RickyKelleyPhotography@gmail.com</p>
       </div>
    )

@@ -24,7 +24,7 @@ const Portfolio = () => {
    return (
       <div className='portfolio'>
          <Nav />
-         <h1>Portfolio</h1>
+         <h2>Portfolio</h2>
          {bigPic && (
             <div className='bigImage' onClick={() => setBigPic(false)}>
                <div className='left arrow' onClick={e => scrollLeft(e)}>
