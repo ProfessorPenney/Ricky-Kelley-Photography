@@ -8,6 +8,13 @@ body {
   min-width: 100%;
 }
 
+.App h2 {
+  margin: 25vh 0 0;
+  text-align: center;
+  font-size: 45px;
+  opacity: 0;
+}
+
 .App a {
   color: inherit;
   text-decoration: none;
@@ -183,12 +190,6 @@ body {
   background-color: #fc0000;
 }
 
-.portfolio h2 {
-  margin: 25vh 0 10vh;
-  text-align: center;
-  font-size: 60px;
-}
-
 .portfolio .bigImage {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -351,23 +352,14 @@ body {
   background-color: #fc0000;
 }
 
-.contact h2 {
-  margin: 25vh 0 10vh;
-}
-
 .about {
   max-width: 1250px;
   margin: auto;
 }
 
-.about .nav li:nth-of-type(3) hr {
+.about .nav li:nth-of-type(2) hr {
   width: 100%;
   opacity: 1;
   background-color: #fc0000;
-}
-
-.about h2 {
-  margin: 25vh 0 10vh;
-  text-align: center;
 }
 /*# sourceMappingURL=App.css.map */

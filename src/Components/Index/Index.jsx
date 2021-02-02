@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import Nav from '../UI/Nav'
-import ricky from '../../IMG/pexels-horacio-rojas-2866073.jpg'
 
 const Index = () => {
    const [showRicky, setshowRicky] = useState(false)
