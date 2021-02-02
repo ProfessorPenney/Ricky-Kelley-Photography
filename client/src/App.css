@@ -49,15 +49,21 @@ body {
   left: 30px;
   font-family: 'Josefin Slab', serif;
   font-weight: 600;
-  font-size: 12px;
+  font-size: 16px;
 }
 
-.nav .logo p {
+.nav .logo div {
+  border: 1px solid black;
+  padding: 8px 7px 5px 8px;
+}
+
+.nav .logo div p {
   margin: 0;
 }
 
-.nav .logo p hr {
-  margin: 1px 0 6px;
+.nav .logo div hr {
+  margin: 1px 0 7px;
+  height: 1px;
 }
 
 .nav .logo .letter-spacing {

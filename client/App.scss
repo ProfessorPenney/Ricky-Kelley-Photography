@@ -43,12 +43,16 @@ body {
       left: 30px;
       font-family: 'Josefin Slab', serif;
       font-weight: 600;
-      font-size: 12px;
-
-      p {
-         margin: 0;
+      font-size: 16px;
+      div {
+         border: 1px solid black;
+         padding: 8px 7px 5px 8px;
+         p {
+            margin: 0;
+         }
          hr {
-            margin: 1px 0 6px;
+            margin: 1px 0 7px;
+            height: 1px;
          }
       }
 
