@@ -20,11 +20,20 @@ const Nav = () => {
 
    return (
       <nav className='nav'>
-         <a href='/' title='Home'>
-            <div className='logo'>
-               <p>Ricky Kelley</p>
+         <a href='/' title='Home' className='logo'>
+            <div>
+               <p>
+                  <span className='letter-spacing'>
+                     <span className='caps'>R</span>ICKY <span className='caps'>K</span>ELLE
+                  </span>
+                  Y
+               </p>
                <hr />
-               <p>Photography</p>
+               <p>
+                  <span className='letter-spacing'>
+                     <span className='caps'>P</span>HOTOGRAPHY
+                  </span>
+               </p>
             </div>
          </a>
          <li onMouseDown={e => handleMouseDown(e)} onMouseUp={e => handleMouseUp(e)}>

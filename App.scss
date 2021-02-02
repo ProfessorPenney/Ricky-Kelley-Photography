@@ -1,3 +1,8 @@
+// @font-face {
+//    font-family: 'Daunpenh';
+//    src: local('Daunpenh'), url('./fonts/daunpenh.ttf');
+// }
+
 body {
    min-height: 100%;
 }
@@ -35,11 +40,20 @@ body {
 
    .logo {
       position: absolute;
-      left: 2%;
-      top: 2vh;
+      left: 30px;
+      font-family: 'Josefin Slab', serif;
+      font-weight: 600;
+      font-size: 12px;
 
       p {
          margin: 0;
+      }
+
+      .letter-spacing {
+         letter-spacing: 0.3em;
+      }
+      .caps {
+         font-size: 16px;
       }
 
       hr {
@@ -112,43 +126,46 @@ body {
       z-index: 2;
 
       h1 {
-         font-size: 80px;
+         font-family: 'Josefin Slab', serif;
+         font-size: 60px;
          margin: 0;
-         span {
+         font-weight: 200;
+         .letter-spacing {
             letter-spacing: 0.5em;
+         }
+         .caps {
+            font-size: 80px;
          }
       }
 
       hr {
          border: none;
-         height: 4px;
+         height: 0.5px;
          background-color: white;
       }
    }
 }
 
 .background0 {
-   background-image: url('./IMG/landscapes/Beach\ Sunset.jpg');
+   background-image: url('./IMG/Slideshow/Portraits\ -\ Hannah-29\ SMALLER.jpg');
 }
-
 .background1 {
-   background-image: url('./IMG/landscapes/IMG_9469\ \(2\).JPG');
+   background-image: url('./IMG/Slideshow/Portraits\ -\ KatyLyonsLeach-80\ SMALLER.jpg');
 }
-
 .background2 {
-   background-image: url('./IMG/landscapes/IMG_9698\ Diff\ NEW.jpg');
+   background-image: url('./IMG/Slideshow/Portraits\ -\ KrisaShine-148\ SMALLER.jpg');
 }
-
 .background3 {
-   background-image: url('./IMG/landscapes/Mt\ Burdell\ \(Diff\ Aspect\).jpg');
+   background-image: url('./IMG/Slideshow/Simon\ Cockle-102\ \(SMALLER\).jpg');
 }
-
 .background4 {
-   background-image: url('./IMG/landscapes/IMG_9531\ Diff.jpg');
+   background-image: url('./IMG/Slideshow/Weddings\ -\ Ali\ and\ Negin_037\ SMALLER.jpg');
 }
-
 .background5 {
-   background-image: url('./IMG/landscapes/Spring\ Blossoms\ 2.jpg');
+   background-image: url('./IMG/Slideshow/Weddings\ -\ Ali\ and\ Negin_093\ SMALLER.jpg');
+}
+.background6 {
+   background-image: url('./IMG/Slideshow/Weddings\ -\ Elnaz\ and\ Benham_122\ \(FIXED\)\ SMALLER.jpg');
 }
 
 .portfolio {
