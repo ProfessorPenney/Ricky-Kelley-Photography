@@ -366,14 +366,40 @@ body {
           filter: grayscale(1);
 }
 
-.contact {
-  text-align: center;
-}
-
 .contact .nav li:nth-of-type(3) hr {
   width: 100%;
   opacity: 1;
   background-color: #fc0000;
+}
+
+.contact .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.contact .container form p {
+  color: #e70000;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.contact .container form label input {
+  display: block;
+  height: 30px;
+  width: 400px;
+}
+
+.contact .container form textarea {
+  display: block;
+  width: 600px;
+  height: 200px;
 }
 
 .about {
