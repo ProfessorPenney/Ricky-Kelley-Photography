@@ -31,13 +31,7 @@ const Portfolio = () => {
                   <hr className='top' />
                   <hr className='bottom' />
                </div>
-               {/* <div className='img-div'> */}
                <img src={images[bigPic - 1].full} alt='portfolio pic' />
-               {/* <div className='close-pic2'>
-                     <hr />
-                     <hr />
-                  </div> */}
-               {/* </div> */}
                <div className='right arrow' onClick={e => scrollRight(e)}>
                   <hr className='top' />
                   <hr className='bottom' />
@@ -55,7 +49,7 @@ const Portfolio = () => {
                   key={img.id}
                   src={img.src}
                   title={img.title}
-                  alt='Portfolio Picture'
+                  alt='portfolio'
                   data-full={img.full}
                   data-id={img.id}
                />

@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import Nav from '../UI/Nav'
 
 const Index = () => {
-   const [showRicky, setshowRicky] = useState(false)
    const [picIndex, setPicIndex] = useState(0)
 
    useEffect(() => {
