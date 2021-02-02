@@ -56,6 +56,10 @@ body {
   margin: 0;
 }
 
+.nav .logo p hr {
+  margin: 1px 0 6px;
+}
+
 .nav .logo .letter-spacing {
   letter-spacing: 0.3em;
 }

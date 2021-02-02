@@ -23,14 +23,11 @@ const Index = () => {
          <header>
             <h1 className='logo'>
                <span className='letter-spacing'>
-                  <span className='caps'>R</span>ICKY KELLE
+                  <span className='caps'>R</span>ICKY <span className='caps'>K</span>ELLE
                </span>
                Y
                <hr />
-               <span className='letter-spacing'>
-                  <span className='caps'>P</span>HOTOGRAPH
-               </span>
-               Y
+               <span className='letter-spacing'>PHOTOGRAPH</span>Y
             </h1>
          </header>
          <div className='preload' style={{ display: 'none' }}>

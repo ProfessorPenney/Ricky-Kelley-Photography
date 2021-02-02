@@ -27,12 +27,8 @@ const Nav = () => {
                      <span className='caps'>R</span>ICKY <span className='caps'>K</span>ELLE
                   </span>
                   Y
-               </p>
-               <hr />
-               <p>
-                  <span className='letter-spacing'>
-                     <span className='caps'>P</span>HOTOGRAPHY
-                  </span>
+                  <hr />
+                  <span className='letter-spacing'>PHOTOGRAPH</span>Y
                </p>
             </div>
          </a>
