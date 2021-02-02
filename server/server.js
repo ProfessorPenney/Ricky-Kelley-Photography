@@ -10,8 +10,6 @@ app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
 
 app.post('/contact', async req => {
-   let testAccount = await nodemailer.createTestAccount()
-
    let transporter = nodemailer.createTransport({
       service: 'Outlook',
       auth: {
@@ -23,7 +21,7 @@ app.post('/contact', async req => {
    let info = await transporter.sendMail(
       {
          from: `"Photography Contact" <penneyprojects@outlook.com>`,
-         to: 'kpenney@gmail.com',
+         to: 'kpenney@gmail.com, rickykelleyphotography@gmail.com',
          subject: 'New Message',
          html: `
          <style>
