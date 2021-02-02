@@ -1,0 +1,16 @@
+{
+   "name": "server",
+   "version": "1.0.0",
+   "description": "",
+   "main": "server.js",
+   "scripts": {
+      "start": "node server.js",
+      "dev": "nodemon server.js"
+   },
+   "author": "Kevin Penney",
+   "license": "ISC",
+   "dependencies": {
+      "express": "^4.17.1",
+      "nodemailer": "^6.4.17"
+   }
+}
