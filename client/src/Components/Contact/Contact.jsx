@@ -22,7 +22,7 @@ const Contact = () => {
          setEmail('')
          setPhone('')
          setMessage('')
-         fetch('contact', {
+         fetch('http://localhost:4000/contact', {
             method: 'POST',
             headers: { 'Content-type': 'application/json' },
             body: JSON.stringify({
