@@ -15,7 +15,7 @@ body {
       margin: 25vh 0 0;
       text-align: center;
       font-size: 45px;
-      opacity: 0;
+      // opacity: 0;
    }
 
    a {
@@ -308,35 +308,65 @@ body {
 .contact {
    margin-bottom: 200px;
    .nav {
-      li:nth-of-type(3) hr {
-         width: 100%;
-         opacity: 1;
-         background-color: rgb(252, 0, 0);
+      li:nth-of-type(3) {
+         hr {
+            width: 100%;
+            opacity: 1;
+            background-color: rgb(252, 0, 0);
+         }
       }
+   }
+
+   p {
+      text-align: center;
+      margin: 30px 0;
+      font-size: 18px;
+      a {
+         text-decoration: underline;
+         text-underline-offset: 2px;
+         text-decoration-color: red;
+      }
+      a:hover {
+         color: red;
+      }
+   }
+   svg {
+      width: 50px;
+      height: 40px;
+      transform: translateY(10px) rotate(90deg);
+      stroke: red;
+      fill: red;
+      margin: auto;
+      display: block;
+      animation-name: bounce;
+      animation-duration: 10s;
+      animation-iteration-count: 3;
    }
 
    .container {
       max-width: 1250px;
       margin: auto;
+      margin-top: 5px;
 
       form {
          display: flex;
          flex-flow: row wrap;
          justify-content: center;
-         text-align: center;
+         align-items: flex-start;
 
-         label {
-            font-size: 30px;
-         }
-         .grid-item {
-            // border: 2px solid black;
-            background-color: rgb(202, 202, 202);
+         div {
             display: flex;
             flex-flow: column nowrap;
-            // justify-content: space-between;
-            margin: 10px;
-            height: 260px;
-            width: 260px;
+            justify-content: flex-start;
+         }
+
+         .grid-item {
+            font-size: 26px;
+            color: white;
+            text-shadow: 0 0 3px black;
+            background-color: rgb(116, 116, 116);
+            margin: 5px 10px;
+            width: 540px;
             box-sizing: border-box;
             padding: 20px;
 
@@ -349,39 +379,46 @@ body {
 
             input {
                margin-top: 20px;
-               height: 100%;
-               text-align: center;
+               height: 40px;
+               width: 100%;
                border: none;
-               background-color: rgba(0, 34, 184, 0.212);
-               // width: 260px;
-               // display: block;
-               // height: 30px;
-               // width: 400px;
+               border-radius: 10px;
+               font-size: 20px;
+               padding: 0 8px;
+               box-sizing: border-box;
+            }
+            textarea {
+               width: 100%;
+               height: 181px;
+               margin-top: 20px;
+               border: 1px solid black;
+               border-radius: 10px;
+               font-size: 20px;
+               padding: 0 8px;
+               box-sizing: border-box;
             }
          }
-         .grid-item-big {
-            width: 820px;
-         }
-         textarea {
-            // display: block;
-            // width: 520px;
-            margin-top: 20px;
-            height: 100%;
-            background-color: rgba(0, 34, 184, 0.212);
-         }
+
          button {
             width: 260px;
             margin: 10px;
-            color: red;
+            color: white;
+            text-shadow: 0 0 3px black;
             font-size: 40px;
-            background-color: white;
-            border: 2px solid black;
+            background-color: rgb(116, 116, 116);
+            border: 1px solid black;
+            border-radius: 10px;
+            align-self: center;
             cursor: pointer;
+         }
+         button:hover {
+            filter: brightness(1.2);
          }
          .feedback {
             color: rgb(231, 0, 0);
             font-size: 20px;
             font-weight: bold;
+            height: 75px;
          }
       }
    }
@@ -397,5 +434,40 @@ body {
          opacity: 1;
          background-color: rgb(252, 0, 0);
       }
+   }
+}
+
+@keyframes pulse {
+   0% {
+      opacity: 1;
+   }
+   25% {
+      opacity: 1;
+   }
+   50% {
+      opacity: 0;
+   }
+   75% {
+      opacity: 0;
+   }
+   100% {
+      opacity: 1;
+   }
+}
+
+@keyframes bounce {
+   0%,
+   4%,
+   10%,
+   16%,
+   20%,
+   100% {
+      transform: translateY(10px) rotate(90deg);
+   }
+   8% {
+      transform: translateY(-30px) rotate(90deg);
+   }
+   12% {
+      transform: translateY(-15px) rotate(90deg);
    }
 }

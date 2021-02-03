@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Nav from '../UI/Nav'
+import ArrowImg from '../UI/ArrowImg'
 
 const Contact = () => {
    const [feedback, setFeedback] = useState('')
@@ -38,55 +39,61 @@ const Contact = () => {
    return (
       <div className='contact'>
          <Nav />
-         <h2>Contact</h2>
+         <h2>Say Hello!</h2>
+         <p>
+            <a href='mailto:rickykelleyphotography@gmail.com'>Email me</a> at:
+            RickyKelleyPhotography@gmail.com
+         </p>
+         <p>
+            <ArrowImg />
+         </p>
          <div className='container'>
             <form>
-               <div className='grid-item'>
-                  <h3>Contact Ricky Kelley:</h3>
-                  {/* <p> Ricky Kelley</p> */}
-                  {/* <h3>Email: </h3> */}
-                  <p>RickyKelleyPhotography</p>
-                  <p>@gmail.com</p>
+               <div>
+                  <label className='grid-item'>
+                     Name:
+                     <input
+                        value={name}
+                        name='name'
+                        type='text'
+                        onChange={e => setName(e.target.value)}
+                     />
+                  </label>
+                  <label className='grid-item'>
+                     Email:
+                     <input
+                        value={email}
+                        name='email'
+                        type='email'
+                        onChange={e => setEmail(e.target.value)}
+                     />
+                  </label>
+                  <label className='grid-item'>
+                     Phone:
+                     <input
+                        value={phone}
+                        name='phone'
+                        type='phone'
+                        onChange={e => setPhone(e.target.value)}
+                     />
+                  </label>
                </div>
-               <label className='grid-item'>
-                  Name:
-                  <textarea
-                     value={name}
-                     name='name'
-                     type='text'
-                     onChange={e => setName(e.target.value)}
-                  />
-               </label>
-               <label className='grid-item'>
-                  Email:
-                  <textarea
-                     value={email}
-                     name='email'
-                     type='email'
-                     onChange={e => setEmail(e.target.value)}
-                  />
-               </label>
-               <label className='grid-item'>
-                  Phone:
-                  <textarea
-                     value={phone}
-                     name='phone'
-                     type='phone'
-                     onChange={e => setPhone(e.target.value)}
-                  />
-               </label>
-               <button type='submit' onClick={e => buttonClick(e)}>
-                  Submit
-               </button>
-               <label className='grid-item grid-item-big'>
-                  Message:
-                  <textarea
-                     value={message}
-                     name='message'
-                     onChange={e => setMessage(e.target.value)}
-                  />
-               </label>
-               <p className='feedback'>{feedback}</p>
+               <div>
+                  <label className='grid-item'>
+                     Message:
+                     <textarea
+                        value={message}
+                        name='message'
+                        onChange={e => setMessage(e.target.value)}
+                     />
+                  </label>
+                  <div className='feedback'>
+                     <p>{feedback}</p>
+                  </div>
+                  <button type='submit' onClick={e => buttonClick(e)}>
+                     Submit
+                  </button>
+               </div>
             </form>
          </div>
       </div>
