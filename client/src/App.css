@@ -353,10 +353,12 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 20vh;
+  margin-top: 200px;
 }
 
 .portfolio .photo-grid img {
+  -ms-flex-negative: 3;
+      flex-shrink: 3;
   cursor: pointer;
   width: 260px;
   height: 260px;
@@ -386,6 +388,8 @@ body {
   text-align: center;
   margin: 30px 0;
   font-size: 18px;
+  padding: 0 20px;
+  line-height: 30px;
 }
 
 .contact .subtitle a {
@@ -522,7 +526,7 @@ body {
 }
 
 .about {
-  max-width: 1120px;
+  max-width: 1080px;
   margin: auto;
 }
 
@@ -530,6 +534,51 @@ body {
   width: 100%;
   opacity: 1;
   background-color: #fc0000;
+}
+
+.about .about-text {
+  padding: 0 20px;
+}
+
+@media only screen and (max-width: 900px) {
+  .index header h1 {
+    font-size: 40px;
+  }
+  .index header h1 .caps {
+    font-size: 60px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .index header h1 {
+    font-size: 24px;
+    font-weight: 600;
+  }
+  .index header h1 .caps {
+    font-size: 32px;
+  }
+  .portfolio .photo-grid img {
+    height: 160px;
+    width: 160px;
+  }
+  .contact .container {
+    width: 90vw;
+  }
+  .contact .container form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    width: 100%;
+  }
+  .contact .container form div {
+    width: 100%;
+  }
+  .contact .container form .grid-item {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 @-webkit-keyframes bounce {

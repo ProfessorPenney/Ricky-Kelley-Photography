@@ -6,7 +6,7 @@ const About = () => {
       <div className='about'>
          <Nav />
          <h2>About Me</h2>
-         <p>
+         <p className='about-text'>
             I have been practicing the craft of photography for over a decade now in the beautiful
             San Francisco Bay Area. I am dedicated to helping you capture your most important
             moments while delivering the most professional product I can. I specialize in
@@ -16,7 +16,7 @@ const About = () => {
             whole experiences through images – and through these images, I present you your most
             special experiences and memories in a way that you may cherish them forever.
          </p>
-         <p>
+         <p className='about-text'>
             I favor using techniques and methods that lessen the need for unnatural manipulation of
             the scene while finding more comfortable means so my clients are able to relax and be
             themselves in front of my lens. I believe the comfort level that I have achieved with my
@@ -26,8 +26,8 @@ const About = () => {
             fields as: Weddings, Headshots, Senior Portraits, Baby Portraits, Family Portraits, Pet
             Portraits, Concerts/Shows, Prom/Homecoming, and Real Estate Photography.
          </p>
-         <p>I look forward to hearing from you!</p>
-         <p>Ricky</p>
+         <p className='about-text'>I look forward to hearing from you!</p>
+         <p className='about-text'>Ricky</p>
       </div>
    )
 }
