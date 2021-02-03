@@ -514,6 +514,7 @@ body {
 }
 
 .contact .container form .feedback {
+  text-align: center;
   color: #e70000;
   font-size: 20px;
   font-weight: bold;

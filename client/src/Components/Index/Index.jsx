@@ -3,26 +3,20 @@ import Nav from '../UI/Nav'
 
 const Index = () => {
    const [picIndex, setPicIndex] = useState(0)
-   const [mounted, setMounted] = useState(false)
 
    useEffect(() => {
-      setMounted(true)
-      rotateBackground()
-      return function cleanup() {
-         setMounted(false)
-      }
-   }, [])
-
-   const rotateBackground = () => {
+      let isMounted = true
       setTimeout(() => {
-         if (mounted)
+         if (isMounted)
             setPicIndex(i => {
-               rotateBackground()
                if (i === 6) return 0
                return i + 1
             })
       }, 8000)
-   }
+      return function cleanup() {
+         isMounted = false
+      }
+   }, [picIndex, setPicIndex])
 
    return (
       <div className={`index background${picIndex}`}>
