@@ -70,7 +70,7 @@ body {
 }
 
 .nav .logo .caps {
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .nav .logo hr {
@@ -381,20 +381,20 @@ body {
   background-color: #fc0000;
 }
 
-.contact p {
+.contact .subtitle {
   text-align: center;
   margin: 30px 0;
   font-size: 18px;
 }
 
-.contact p a {
+.contact .subtitle a {
   text-decoration: underline;
   text-underline-offset: 2px;
   -webkit-text-decoration-color: red;
           text-decoration-color: red;
 }
 
-.contact p a:hover {
+.contact .subtitle a:hover {
   color: red;
 }
 
@@ -405,8 +405,6 @@ body {
           transform: translateY(10px) rotate(90deg);
   stroke: red;
   fill: red;
-  margin: auto;
-  display: block;
   -webkit-animation-name: bounce;
           animation-name: bounce;
   -webkit-animation-duration: 10s;

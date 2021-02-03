@@ -60,7 +60,7 @@ body {
          letter-spacing: 0.3em;
       }
       .caps {
-         font-size: 16px;
+         font-size: 20px;
       }
 
       hr {
@@ -317,7 +317,7 @@ body {
       }
    }
 
-   p {
+   .subtitle {
       text-align: center;
       margin: 30px 0;
       font-size: 18px;
@@ -336,8 +336,6 @@ body {
       transform: translateY(10px) rotate(90deg);
       stroke: red;
       fill: red;
-      margin: auto;
-      display: block;
       animation-name: bounce;
       animation-duration: 10s;
       animation-iteration-count: 3;

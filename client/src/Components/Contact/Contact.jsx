@@ -40,11 +40,11 @@ const Contact = () => {
       <div className='contact'>
          <Nav />
          <h2>Say Hello!</h2>
-         <p>
+         <p className='subtitle'>
             <a href='mailto:rickykelleyphotography@gmail.com'>Email me</a> at:
             RickyKelleyPhotography@gmail.com
          </p>
-         <p>
+         <p className='subtitle'>
             <ArrowImg />
          </p>
          <div className='container'>
