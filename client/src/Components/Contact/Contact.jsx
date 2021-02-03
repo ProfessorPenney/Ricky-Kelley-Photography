@@ -40,39 +40,45 @@ const Contact = () => {
          <Nav />
          <h2>Contact</h2>
          <div className='container'>
-            <div>
-               <p>Name: Ricky Kelley</p>
-               <p>Email: RickyKelleyPhotography@gmail.com</p>
-            </div>
             <form>
-               <label>
+               <div className='grid-item'>
+                  <h3>Contact Ricky Kelley:</h3>
+                  {/* <p> Ricky Kelley</p> */}
+                  {/* <h3>Email: </h3> */}
+                  <p>RickyKelleyPhotography</p>
+                  <p>@gmail.com</p>
+               </div>
+               <label className='grid-item'>
                   Name:
-                  <input
+                  <textarea
                      value={name}
                      name='name'
                      type='text'
                      onChange={e => setName(e.target.value)}
                   />
                </label>
-               <label>
+               <label className='grid-item'>
                   Email:
-                  <input
+                  <textarea
                      value={email}
                      name='email'
                      type='email'
                      onChange={e => setEmail(e.target.value)}
                   />
                </label>
-               <label>
+               <label className='grid-item'>
                   Phone:
-                  <input
+                  <textarea
                      value={phone}
                      name='phone'
                      type='phone'
                      onChange={e => setPhone(e.target.value)}
                   />
                </label>
-               <label>
+               <button type='submit' onClick={e => buttonClick(e)}>
+                  Submit
+               </button>
+               <label className='grid-item grid-item-big'>
                   Message:
                   <textarea
                      value={message}
@@ -80,10 +86,7 @@ const Contact = () => {
                      onChange={e => setMessage(e.target.value)}
                   />
                </label>
-               <button type='submit' onClick={e => buttonClick(e)}>
-                  Submit
-               </button>
-               <p>{feedback}</p>
+               <p className='feedback'>{feedback}</p>
             </form>
          </div>
       </div>

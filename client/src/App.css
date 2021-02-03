@@ -372,6 +372,10 @@ body {
           filter: grayscale(1);
 }
 
+.contact {
+  margin-bottom: 200px;
+}
+
 .contact .nav li:nth-of-type(3) hr {
   width: 100%;
   opacity: 1;
@@ -379,33 +383,85 @@ body {
 }
 
 .contact .container {
+  max-width: 1250px;
+  margin: auto;
+}
+
+.contact .container form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
 }
 
-.contact .container form p {
-  color: #e70000;
-  font-size: 20px;
-  font-weight: bold;
+.contact .container form label {
+  font-size: 30px;
 }
 
-.contact .container form label input {
-  display: block;
-  height: 30px;
-  width: 400px;
+.contact .container form .grid-item {
+  background-color: #cacaca;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  margin: 10px;
+  height: 260px;
+  width: 260px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 20px;
+}
+
+.contact .container form .grid-item h3 {
+  margin: 0 0 40px;
+}
+
+.contact .container form .grid-item p {
+  margin: 0 0 16px;
+}
+
+.contact .container form .grid-item input {
+  margin-top: 20px;
+  height: 100%;
+  text-align: center;
+  border: none;
+  background-color: rgba(0, 34, 184, 0.212);
+}
+
+.contact .container form .grid-item-big {
+  width: 820px;
 }
 
 .contact .container form textarea {
-  display: block;
-  width: 600px;
-  height: 200px;
+  margin-top: 20px;
+  height: 100%;
+  background-color: rgba(0, 34, 184, 0.212);
+}
+
+.contact .container form button {
+  width: 260px;
+  margin: 10px;
+  color: red;
+  font-size: 40px;
+  background-color: white;
+  border: 2px solid black;
+  cursor: pointer;
+}
+
+.contact .container form .feedback {
+  color: #e70000;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .about {
