@@ -353,6 +353,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-top: 20vh;
 }
 
 .portfolio .photo-grid img {
@@ -520,7 +521,7 @@ body {
 }
 
 .about {
-  max-width: 1250px;
+  max-width: 1120px;
   margin: auto;
 }
 
@@ -528,42 +529,6 @@ body {
   width: 100%;
   opacity: 1;
   background-color: #fc0000;
-}
-
-@-webkit-keyframes pulse {
-  0% {
-    opacity: 1;
-  }
-  25% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  75% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes pulse {
-  0% {
-    opacity: 1;
-  }
-  25% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  75% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 
 @-webkit-keyframes bounce {
