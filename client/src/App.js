@@ -1,5 +1,5 @@
 import './App.css'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom'
 import Index from './Components/Index/Index'
 import Portfolio from './Components/Portfolio/Portfolio'
 import About from './Components/About/About'
@@ -15,6 +15,7 @@ function App() {
             <Route path='/about' component={About} />
             <Route path='/contact' component={Contact} />
             <Route path='/testimonials' component={Testimonials} />
+            <Route render={() => <Redirect to={{ pathname: '/' }} />} />
          </Router>
       </div>
    )
