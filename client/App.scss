@@ -472,10 +472,32 @@ body {
    .portfolio {
       nav {
          a:nth-of-type(1) {
-            // background-color: rgba(129, 86, 86, 0.281);
             li {
                color: #ebebe4;
-               // text-decoration: underline;
+               hr {
+                  opacity: 0;
+               }
+            }
+         }
+      }
+   }
+   .contact {
+      nav {
+         a:nth-of-type(3) {
+            li {
+               color: #ebebe4;
+               hr {
+                  opacity: 0;
+               }
+            }
+         }
+      }
+   }
+   .about {
+      nav {
+         a:nth-of-type(2) {
+            li {
+               color: #ebebe4;
                hr {
                   opacity: 0;
                }
