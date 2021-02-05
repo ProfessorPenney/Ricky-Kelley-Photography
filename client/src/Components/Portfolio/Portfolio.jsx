@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import images from './images.js'
-import Nav from '../UI/Nav'
+import Nav from '../UI/NavBar'
 
 const Portfolio = () => {
    const [bigPic, setBigPic] = useState(false)

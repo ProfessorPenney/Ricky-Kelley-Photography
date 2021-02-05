@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import Nav from '../UI/Nav'
+import Nav from '../UI/NavBar'
 
 const Index = () => {
    const [picIndex, setPicIndex] = useState(0)

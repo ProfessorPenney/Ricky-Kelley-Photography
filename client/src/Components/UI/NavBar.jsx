@@ -1,63 +1,42 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 const DivMain = styled.div`
-   background-color: rgba(83, 83, 83, 0.137); // color
    position: absolute;
    top: 0;
-   width: 100%;
+   left: 0;
+   width: 100vw;
    height: 60px;
+   color: rgb(44, 44, 44);
 `
 
 const HrUnderline = styled.hr`
-   position: absolute;
-   left: 0;
-   margin: 0;
    width: 0;
    border: none;
    height: 2px;
    background-color: white; // color
-   transition: all 0ms linear 250ms, width 250ms linear;
    transform: rotate(0);
    transform-origin: left;
 `
 
-const A = styled.a`
+const A = styled(Link)`
    display: flex;
    flex-direction: column;
    justify-content: center;
    text-decoration: none;
-   &:hover {
-      background-color: rgba(180, 180, 180, 0.397); // color
-      ${HrUnderline} {
-         width: 100%;
-         transform: rotate(180deg);
-         left: 100%;
-      }
-   }
-   @media only screen and (max-width: 1259px) {
+   @media only screen and (max-width: 900px) {
       font-size: 20px;
       border-bottom: 1px white solid; // color
       height: 100%;
-      &:nth-of-type(1) {
-         border-top: 1px white solid; // color
-      }
-      &::last-of-type {
+      /* &:nth-of-type(1) { */
+      /* border-top: 1px white solid; // color */
+      /* } */
+      &:last-of-type {
          border-bottom: none;
       }
    }
 `
-
-// const H2 = styled.h2`
-//    display: none;
-//    opacity: 0;
-//    font-size: 30px;
-//    transition: opacity 1.3s;
-//    @media only screen and (max-width: 1259px) {
-//       display: block;
-//       margin-bottom: 5px;
-//    }
-// `
 
 const HrBurger = styled.div`
    border: none;
@@ -85,12 +64,12 @@ const DivBurger = styled.div`
    z-index: 11;
    display: none;
    width: 60px;
-   padding-right: 10px;
+   padding-right: 20px;
    cursor: pointer;
    position: absolute;
    right: 0;
-   top: 4px;
-   @media only screen and (max-width: 1259px) {
+   top: 22px;
+   @media only screen and (max-width: 900px) {
       display: block;
       position: ${props => (props.animate ? 'fixed' : 'absolute')};
       ${Hr1} {
@@ -114,8 +93,7 @@ const NavEl = styled.nav`
    display: flex;
    justify-content: center;
    align-items: stretch;
-   color: white; // color
-   @media only screen and (max-width: 1259px) {
+   @media only screen and (max-width: 900px) {
       z-index: 10;
       position: fixed;
       left: 100%;
@@ -135,15 +113,11 @@ const NavEl = styled.nav`
       ${A} {
          opacity: ${props => (props.animate ? 1 : 0)};
       }
-      ${H2} {
-         opacity: ${props => (props.animate ? 1 : 0)};
-      }
    }
 `
 
 const Li = styled.li`
-   position: relative;
-   margin: 0 20px;
+   margin: 0 40px;
    list-style: none;
 `
 
@@ -151,42 +125,45 @@ const Nav = ({ projects }) => {
    const [mobileMenu, setMobileMenu] = useState(false)
 
    return (
-      <DivMain>
+      <DivMain className='nav-main'>
+         <a href='/' title='Home' className='logo'>
+            <div>
+               <p>
+                  <span className='letter-spacing'>
+                     <span className='caps'>R</span>ICKY <span className='caps'>K</span>ELLE
+                  </span>
+                  Y
+               </p>
+               <hr />
+               <p>
+                  <span className='letter-spacing'>PHOTOGRAPH</span>Y
+               </p>
+            </div>
+         </a>
          <NavEl animate={mobileMenu}>
-            <a href='/' title='Home' className='logo'>
-               <div>
-                  <p>
-                     <span className='letter-spacing'>
-                        <span className='caps'>R</span>ICKY <span className='caps'>K</span>ELLE
-                     </span>
-                     Y
-                  </p>
-                  <hr />
-                  <p>
-                     <span className='letter-spacing'>PHOTOGRAPH</span>Y
-                  </p>
-               </div>
-            </a>
-            <A href='' key='' style={{ transition: 'opacity 1.3s 0.1s' }}>
+            <A to='/Portfolio' style={{ transition: 'opacity 1.3s 0.2s' }}>
                <Li>
-                  title1
+                  Portfolio
                   <HrUnderline />
                </Li>
             </A>
-            <A href='' key='' style={{ transition: 'opacity 1.3s 0.2s' }}>
+            <A to='/About' style={{ transition: 'opacity 1.3s 0.4s' }}>
                <Li>
-                  title2
+                  About
                   <HrUnderline />
                </Li>
             </A>
-            <A href='' key='' style={{ transition: 'opacity 1.3s 0.3s' }}>
+            <A to='/Contact' style={{ transition: 'opacity 1.3s 0.7s' }}>
                <Li>
-                  title3
+                  Contact
                   <HrUnderline />
                </Li>
             </A>
          </NavEl>
-         <DivBurger animate={mobileMenu} onClick={() => setMobileMenu(value => !value)}>
+         <DivBurger
+            className='burger'
+            animate={mobileMenu}
+            onClick={() => setMobileMenu(value => !value)}>
             <Hr1 className='burg1' />
             <Hr2 className='burg2' />
             <Hr3 className='burg3' />

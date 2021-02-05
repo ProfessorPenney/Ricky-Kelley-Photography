@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Nav from '../UI/Nav'
+import Nav from '../UI/NavBar'
 import ArrowImg from '../UI/ArrowImg'
 
 const Contact = () => {

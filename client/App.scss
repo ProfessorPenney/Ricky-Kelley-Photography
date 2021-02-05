@@ -24,19 +24,9 @@ body {
    }
 }
 
-.nav {
-   position: absolute;
-   top: 0;
-   left: 0;
-   width: 100vw;
-   display: flex;
-   flex-flow: row nowrap;
-   list-style-type: none;
+.nav-main {
    color: rgb(44, 44, 44);
-   justify-content: center;
-   align-items: center;
-   padding-top: 5vh;
-   text-align: center;
+   padding-top: 2vh;
 
    .logo {
       position: absolute;
@@ -70,34 +60,27 @@ body {
          margin: 4px 0;
       }
    }
+   a {
+      li {
+         font-size: 20px;
 
-   li {
-      font-size: 20px;
-      margin: 0 20px;
-      transition: transform 30ms;
-      cursor: pointer;
-
-      hr {
-         width: 0;
-         opacity: 0;
-         transition: opacity 400ms linear, width 1ms linear 400ms;
-         background-color: rgb(44, 44, 44);
-         height: 3px;
-         border: none;
-         border-radius: 2px;
-         margin-bottom: 0;
+         hr {
+            width: 0;
+            opacity: 0;
+            transition: opacity 400ms linear, width 1ms linear 400ms;
+            background-color: rgb(44, 44, 44);
+            height: 2px;
+            border-radius: 2px;
+            margin: 2px auto 0;
+         }
+         &:hover {
+            hr {
+               opacity: 1;
+               width: 100%;
+               transition: opacity 100ms linear, width 300ms ease-in-out;
+            }
+         }
       }
-   }
-   li:hover {
-      hr {
-         opacity: 1;
-         width: 100%;
-         transition: opacity 100ms linear, width 300ms ease-in-out;
-      }
-   }
-
-   .animate {
-      transform: scale(0.85);
    }
 }
 
@@ -115,12 +98,16 @@ body {
    background-size: cover;
    transition: background-image 1s linear;
 
-   .nav {
+   .nav-main {
       color: white;
       background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.384), rgba(110, 110, 110, 0));
 
       .logo {
          display: none;
+      }
+
+      nav a li div {
+         background-color: white;
       }
 
       hr {
@@ -180,8 +167,8 @@ body {
    max-width: 1250px;
    padding-bottom: 10%;
 
-   .nav {
-      li:nth-of-type(1) hr {
+   nav {
+      a:nth-of-type(1) li hr {
          width: 100%;
          opacity: 1;
          background-color: rgb(252, 0, 0);
@@ -304,8 +291,9 @@ body {
 
 .contact {
    margin-bottom: 200px;
-   .nav {
-      li:nth-of-type(3) {
+
+   nav {
+      a:nth-of-type(3) li {
          hr {
             width: 100%;
             opacity: 1;
@@ -426,8 +414,8 @@ body {
    max-width: 1080px;
    margin: auto;
 
-   .nav {
-      li:nth-of-type(2) hr {
+   nav {
+      a:nth-of-type(2) li hr {
          width: 100%;
          opacity: 1;
          background-color: rgb(252, 0, 0);
@@ -440,12 +428,57 @@ body {
 }
 
 @media only screen and (max-width: 900px) {
+   .nav-main {
+      color: rgb(44, 44, 44);
+      text-align: center;
+      .logo {
+         top: 20px;
+      }
+      nav {
+         padding-left: 0;
+         background-color: rgb(211, 211, 211);
+         color: rgb(44, 44, 44);
+
+         a {
+            border-color: rgb(44, 44, 44);
+            li {
+               font-size: 24px;
+            }
+            li:hover hr {
+               opacity: 0;
+            }
+         }
+      }
+      .burger {
+         div {
+            background-color: black;
+         }
+      }
+   }
    .index {
       header {
          h1 {
             font-size: 40px;
             .caps {
                font-size: 60px;
+            }
+         }
+      }
+      .nav-main .burger div {
+         background-color: white;
+      }
+   }
+
+   .portfolio {
+      nav {
+         a:nth-of-type(1) {
+            // background-color: rgba(129, 86, 86, 0.281);
+            li {
+               color: #ebebe4;
+               // text-decoration: underline;
+               hr {
+                  opacity: 0;
+               }
             }
          }
       }

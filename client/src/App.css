@@ -19,31 +19,12 @@ body {
   text-decoration: none;
 }
 
-.nav {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  list-style-type: none;
+.nav-main {
   color: #2c2c2c;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding-top: 5vh;
-  text-align: center;
+  padding-top: 2vh;
 }
 
-.nav .logo {
+.nav-main .logo {
   position: absolute;
   left: 30px;
   font-family: 'Josefin Slab', serif;
@@ -51,67 +32,55 @@ body {
   font-size: 16px;
 }
 
-.nav .logo div {
+.nav-main .logo div {
   border: 1px solid black;
   padding: 8px 7px 5px 8px;
 }
 
-.nav .logo div p {
+.nav-main .logo div p {
   margin: 0;
 }
 
-.nav .logo div hr {
+.nav-main .logo div hr {
   margin: 1px 0 7px;
   height: 1px;
 }
 
-.nav .logo .letter-spacing {
+.nav-main .logo .letter-spacing {
   letter-spacing: 0.3em;
 }
 
-.nav .logo .caps {
+.nav-main .logo .caps {
   font-size: 20px;
 }
 
-.nav .logo hr {
+.nav-main .logo hr {
   border: none;
   height: 2px;
   background-color: #2c2c2c;
   margin: 4px 0;
 }
 
-.nav li {
+.nav-main a li {
   font-size: 20px;
-  margin: 0 20px;
-  -webkit-transition: -webkit-transform 30ms;
-  transition: -webkit-transform 30ms;
-  transition: transform 30ms;
-  transition: transform 30ms, -webkit-transform 30ms;
-  cursor: pointer;
 }
 
-.nav li hr {
+.nav-main a li hr {
   width: 0;
   opacity: 0;
   -webkit-transition: opacity 400ms linear, width 1ms linear 400ms;
   transition: opacity 400ms linear, width 1ms linear 400ms;
   background-color: #2c2c2c;
-  height: 3px;
-  border: none;
+  height: 2px;
   border-radius: 2px;
-  margin-bottom: 0;
+  margin: 2px auto 0;
 }
 
-.nav li:hover hr {
+.nav-main a li:hover hr {
   opacity: 1;
   width: 100%;
   -webkit-transition: opacity 100ms linear, width 300ms ease-in-out;
   transition: opacity 100ms linear, width 300ms ease-in-out;
-}
-
-.nav .animate {
-  -webkit-transform: scale(0.85);
-          transform: scale(0.85);
 }
 
 .index {
@@ -139,17 +108,21 @@ body {
   transition: background-image 1s linear;
 }
 
-.index .nav {
+.index .nav-main {
   color: white;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.384)), to(rgba(110, 110, 110, 0)));
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.384), rgba(110, 110, 110, 0));
 }
 
-.index .nav .logo {
+.index .nav-main .logo {
   display: none;
 }
 
-.index .nav hr {
+.index .nav-main nav a li div {
+  background-color: white;
+}
+
+.index .nav-main hr {
   background-color: white;
 }
 
@@ -213,7 +186,7 @@ body {
   padding-bottom: 10%;
 }
 
-.portfolio .nav li:nth-of-type(1) hr {
+.portfolio nav a:nth-of-type(1) li hr {
   width: 100%;
   opacity: 1;
   background-color: #fc0000;
@@ -378,7 +351,7 @@ body {
   margin-bottom: 200px;
 }
 
-.contact .nav li:nth-of-type(3) hr {
+.contact nav a:nth-of-type(3) li hr {
   width: 100%;
   opacity: 1;
   background-color: #fc0000;
@@ -530,7 +503,7 @@ body {
   margin: auto;
 }
 
-.about .nav li:nth-of-type(2) hr {
+.about nav a:nth-of-type(2) li hr {
   width: 100%;
   opacity: 1;
   background-color: #fc0000;
@@ -541,11 +514,44 @@ body {
 }
 
 @media only screen and (max-width: 900px) {
+  .nav-main {
+    color: #2c2c2c;
+    text-align: center;
+  }
+  .nav-main .logo {
+    top: 20px;
+  }
+  .nav-main nav {
+    padding-left: 0;
+    background-color: lightgray;
+    color: #2c2c2c;
+  }
+  .nav-main nav a {
+    border-color: #2c2c2c;
+  }
+  .nav-main nav a li {
+    font-size: 24px;
+  }
+  .nav-main nav a li:hover hr {
+    opacity: 0;
+  }
+  .nav-main .burger div {
+    background-color: black;
+  }
   .index header h1 {
     font-size: 40px;
   }
   .index header h1 .caps {
     font-size: 60px;
+  }
+  .index .nav-main .burger div {
+    background-color: white;
+  }
+  .portfolio nav a:nth-of-type(1) li {
+    color: #ebebe4;
+  }
+  .portfolio nav a:nth-of-type(1) li hr {
+    opacity: 0;
   }
 }
 
