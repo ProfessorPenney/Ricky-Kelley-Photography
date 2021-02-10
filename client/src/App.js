@@ -1,5 +1,5 @@
 import './App.css'
-import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-dom'
 import Index from './Components/Index/Index'
 import Portfolio from './Components/Portfolio/Portfolio'
 import About from './Components/About/About'
@@ -10,12 +10,14 @@ function App() {
    return (
       <div className='App'>
          <Router>
-            <Route exact path='/' component={Index} />
-            <Route path='/portfolio' component={Portfolio} />
-            <Route path='/about' component={About} />
-            <Route path='/contact' component={Contact} />
-            <Route path='/testimonials' component={Testimonials} />
-            <Route render={() => <Redirect to={{ pathname: '/' }} />} />
+            <Switch>
+               <Route exact path='/' component={Index} />
+               <Route path='/portfolio' component={Portfolio} />
+               <Route path='/about' component={About} />
+               <Route path='/contact' component={Contact} />
+               <Route path='/testimonials' component={Testimonials} />
+               <Route path='*' render={() => <Redirect to='/' />} />
+            </Switch>
          </Router>
       </div>
    )
