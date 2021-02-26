@@ -1,25 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import Nav from '../UI/NavBar'
 
 const Index = () => {
-   const [picIndex, setPicIndex] = useState(0)
-
-   useEffect(() => {
-      let isMounted = true
-      setTimeout(() => {
-         if (isMounted)
-            setPicIndex(i => {
-               if (i === 6) return 0
-               return i + 1
-            })
-      }, 8000)
-      return function cleanup() {
-         isMounted = false
-      }
-   }, [picIndex, setPicIndex])
-
    return (
-      <div className={`index background${picIndex}`}>
+      <div className='index'>
          <Nav />
          <header>
             <h1 className='logo'>

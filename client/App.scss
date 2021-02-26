@@ -85,6 +85,7 @@ body {
 }
 
 .index {
+   position: relative;
    color: white;
    text-align: center;
    height: 100vh;
@@ -94,9 +95,19 @@ body {
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   background-position: center;
-   background-size: cover;
-   transition: background-image 1s linear;
+   // transition: background-image 1s linear;
+   &::before {
+      content: '';
+      animation: indexBackground 60s infinite;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      filter: brightness(0.8);
+      background-position: center;
+      background-size: cover;
+   }
 
    .nav-main {
       color: white;
@@ -138,28 +149,6 @@ body {
          background-color: white;
       }
    }
-}
-
-.background0 {
-   background-image: url('./IMG/Slideshow/Portraits\ -\ Hannah-29\ SMALLER.jpg');
-}
-.background1 {
-   background-image: url('./IMG/Slideshow/Portraits\ -\ KatyLyonsLeach-80\ SMALLER.jpg');
-}
-.background2 {
-   background-image: url('./IMG/Slideshow/Portraits\ -\ KrisaShine-148\ SMALLER.jpg');
-}
-.background3 {
-   background-image: url('./IMG/Slideshow/Simon\ Cockle-102\ \(SMALLER\).jpg');
-}
-.background4 {
-   background-image: url('./IMG/Slideshow/Weddings\ -\ Ali\ and\ Negin_037\ SMALLER.jpg');
-}
-.background5 {
-   background-image: url('./IMG/Slideshow/Weddings\ -\ Ali\ and\ Negin_093\ SMALLER.jpg');
-}
-.background6 {
-   background-image: url('./IMG/Slideshow/Weddings\ -\ Elnaz\ and\ Benham_122\ \(FIXED\)\ SMALLER.jpg');
 }
 
 .portfolio {
@@ -562,5 +551,39 @@ body {
    }
    12% {
       transform: translateY(-15px) rotate(90deg);
+   }
+}
+
+@keyframes indexBackground {
+   0%,
+   13% {
+      background-image: url('./IMG/Slideshow/Portraits\ -\ Hannah-29\ SMALLER.jpg');
+   }
+   16%,
+   27% {
+      background-image: url('./IMG/Slideshow/Portraits\ -\ KatyLyonsLeach-80\ SMALLER.jpg');
+   }
+   30%,
+   41% {
+      background-image: url('./IMG/Slideshow/Portraits\ -\ KrisaShine-148\ SMALLER.jpg');
+   }
+   44%,
+   55% {
+      background-image: url('./IMG/Slideshow/Simon\ Cockle-102\ \(SMALLER\).jpg');
+   }
+   58%,
+   69% {
+      background-image: url('./IMG/Slideshow/Weddings\ -\ Ali\ and\ Negin_037\ SMALLER.jpg');
+   }
+   72%,
+   83% {
+      background-image: url('./IMG/Slideshow/Weddings\ -\ Ali\ and\ Negin_093\ SMALLER.jpg');
+   }
+   86%,
+   97% {
+      background-image: url('./IMG/Slideshow/Weddings\ -\ Elnaz\ and\ Benham_122\ \(FIXED\)\ SMALLER.jpg');
+   }
+   100% {
+      background-image: url('./IMG/Slideshow/Portraits\ -\ Hannah-29\ SMALLER.jpg');
    }
 }
