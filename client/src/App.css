@@ -473,10 +473,11 @@ body {
 
 .contact .container form button {
   width: 260px;
+  height: 60px;
   margin: 10px;
   color: white;
   text-shadow: 0 0 3px black;
-  font-size: 40px;
+  font-size: 26px;
   background-color: #747474;
   border: 1px solid black;
   border-radius: 10px;
@@ -484,11 +485,15 @@ body {
       -ms-grid-row-align: center;
       align-self: center;
   cursor: pointer;
+  font-family: 'Shippori Mincho', serif;
+  -webkit-transition: all 100ms;
+  transition: all 100ms;
 }
 
 .contact .container form button:hover {
-  -webkit-filter: brightness(1.2);
-          filter: brightness(1.2);
+  background-color: red;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .contact .container form .feedback {
@@ -497,12 +502,13 @@ body {
   color: #e70000;
   font-size: 18px;
   font-weight: bold;
-  height: 75px;
+  height: 60px;
 }
 
 .about {
   max-width: 1080px;
   margin: auto;
+  margin-bottom: 200px;
 }
 
 .about nav a:nth-of-type(2) li hr {

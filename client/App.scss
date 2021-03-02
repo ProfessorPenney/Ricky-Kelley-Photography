@@ -383,18 +383,22 @@ body {
 
          button {
             width: 260px;
+            height: 60px;
             margin: 10px;
             color: white;
             text-shadow: 0 0 3px black;
-            font-size: 40px;
+            font-size: 26px;
             background-color: rgb(116, 116, 116);
             border: 1px solid black;
             border-radius: 10px;
             align-self: center;
             cursor: pointer;
+            font-family: 'Shippori Mincho', serif;
+            transition: all 100ms;
          }
          button:hover {
-            filter: brightness(1.2);
+            background-color: red;
+            transform: scale(1.05);
          }
          .feedback {
             font-family: 'Shippori Mincho', serif;
@@ -402,7 +406,7 @@ body {
             color: rgb(231, 0, 0);
             font-size: 18px;
             font-weight: bold;
-            height: 75px;
+            height: 60px;
          }
       }
    }
@@ -411,6 +415,7 @@ body {
 .about {
    max-width: 1080px;
    margin: auto;
+   margin-bottom: 200px;
 
    nav {
       a:nth-of-type(2) li hr {

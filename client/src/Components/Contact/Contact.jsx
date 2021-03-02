@@ -91,7 +91,7 @@ const Contact = () => {
                      <p>{feedback}</p>
                   </div>
                   <button type='submit' onClick={e => buttonClick(e)}>
-                     Submit
+                     SUBMIT
                   </button>
                </div>
             </form>
