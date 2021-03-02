@@ -644,68 +644,68 @@ body {
 @-webkit-keyframes indexBackground {
   0%,
   13% {
-    background-image: url("./IMG/Slideshow/Portraits - Hannah-29 SMALLER.jpg");
+    background-image: url("./IMG/Slideshow/1.jpg");
   }
   16%,
   27% {
-    background-image: url("./IMG/Slideshow/Portraits - KatyLyonsLeach-80 SMALLER.jpg");
+    background-image: url("./IMG/Slideshow/2.jpg");
   }
   30%,
   41% {
-    background-image: url("./IMG/Slideshow/Portraits - KrisaShine-148 SMALLER.jpg");
+    background-image: url("./IMG/Slideshow/3.jpg");
   }
   44%,
   55% {
-    background-image: url("./IMG/Slideshow/Simon Cockle-102 (SMALLER).jpg");
+    background-image: url("./IMG/Slideshow/4.jpg");
   }
   58%,
   69% {
-    background-image: url("./IMG/Slideshow/Weddings - Ali and Negin_037 SMALLER.jpg");
+    background-image: url("./IMG/Slideshow/5.jpg");
   }
   72%,
   83% {
-    background-image: url("./IMG/Slideshow/Weddings - Ali and Negin_093 SMALLER.jpg");
+    background-image: url("./IMG/Slideshow/6.jpg");
   }
   86%,
   97% {
-    background-image: url("./IMG/Slideshow/Weddings - Elnaz and Benham_122 (FIXED) SMALLER.jpg");
+    background-image: url("./IMG/Slideshow/7.jpg");
   }
   100% {
-    background-image: url("./IMG/Slideshow/Portraits - Hannah-29 SMALLER.jpg");
+    background-image: url("./IMG/Slideshow/1.jpg");
   }
 }
 
 @keyframes indexBackground {
   0%,
   13% {
-    background-image: url("./IMG/Slideshow/Portraits - Hannah-29 SMALLER.jpg");
+    background-image: url("./IMG/Slideshow/1.jpg");
   }
   16%,
   27% {
-    background-image: url("./IMG/Slideshow/Portraits - KatyLyonsLeach-80 SMALLER.jpg");
+    background-image: url("./IMG/Slideshow/2.jpg");
   }
   30%,
   41% {
-    background-image: url("./IMG/Slideshow/Portraits - KrisaShine-148 SMALLER.jpg");
+    background-image: url("./IMG/Slideshow/3.jpg");
   }
   44%,
   55% {
-    background-image: url("./IMG/Slideshow/Simon Cockle-102 (SMALLER).jpg");
+    background-image: url("./IMG/Slideshow/4.jpg");
   }
   58%,
   69% {
-    background-image: url("./IMG/Slideshow/Weddings - Ali and Negin_037 SMALLER.jpg");
+    background-image: url("./IMG/Slideshow/5.jpg");
   }
   72%,
   83% {
-    background-image: url("./IMG/Slideshow/Weddings - Ali and Negin_093 SMALLER.jpg");
+    background-image: url("./IMG/Slideshow/6.jpg");
   }
   86%,
   97% {
-    background-image: url("./IMG/Slideshow/Weddings - Elnaz and Benham_122 (FIXED) SMALLER.jpg");
+    background-image: url("./IMG/Slideshow/7.jpg");
   }
   100% {
-    background-image: url("./IMG/Slideshow/Portraits - Hannah-29 SMALLER.jpg");
+    background-image: url("./IMG/Slideshow/1.jpg");
   }
 }
 /*# sourceMappingURL=App.css.map */

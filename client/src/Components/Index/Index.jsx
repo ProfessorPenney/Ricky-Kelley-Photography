@@ -18,39 +18,13 @@ const Index = () => {
             </h1>
          </header>
          <div className='preload' style={{ display: 'none' }}>
-            <img
-               src={require('../../IMG/Slideshow/Portraits - Hannah-29 SMALLER.jpg').default}
-               alt=''
-            />
-            <img
-               src={
-                  require('../../IMG/Slideshow/Portraits - KatyLyonsLeach-80 SMALLER.jpg').default
-               }
-               alt=''
-            />
-            <img
-               src={require('../../IMG/Slideshow/Portraits - KrisaShine-148 SMALLER.jpg').default}
-               alt=''
-            />
-            <img
-               src={require('../../IMG/Slideshow/Simon Cockle-102 (SMALLER).jpg').default}
-               alt=''
-            />
-            <img
-               src={require('../../IMG/Slideshow/Weddings - Ali and Negin_037 SMALLER.jpg').default}
-               alt=''
-            />
-            <img
-               src={require('../../IMG/Slideshow/Weddings - Ali and Negin_093 SMALLER.jpg').default}
-               alt=''
-            />
-            <img
-               src={
-                  require('../../IMG/Slideshow/Weddings - Elnaz and Benham_122 (FIXED) SMALLER.jpg')
-                     .default
-               }
-               alt=''
-            />
+            <img src={require('../../IMG/Slideshow/1.jpg').default} alt='' />
+            <img src={require('../../IMG/Slideshow/2.jpg').default} alt='' />
+            <img src={require('../../IMG/Slideshow/3.jpg').default} alt='' />
+            <img src={require('../../IMG/Slideshow/4.jpg').default} alt='' />
+            <img src={require('../../IMG/Slideshow/5.jpg').default} alt='' />
+            <img src={require('../../IMG/Slideshow/6.jpg').default} alt='' />
+            <img src={require('../../IMG/Slideshow/7.jpg').default} alt='' />
          </div>
       </div>
    )
