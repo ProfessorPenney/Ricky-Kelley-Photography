@@ -29,7 +29,7 @@ body {
    .logo {
       position: absolute;
       left: 30px;
-      font-weight: 800;
+      font-weight: 700;
       font-size: 16px;
       text-align: center;
       div {
@@ -279,7 +279,8 @@ body {
          object-fit: cover;
          transition: all 200ms;
       }
-      img:hover {
+      img:hover,
+      img:focus {
          transform: scale(1.05);
       }
    }
@@ -310,7 +311,8 @@ body {
          text-underline-offset: 2px;
          text-decoration-color: red;
       }
-      a:hover {
+      a:hover,
+      a:focus {
          color: red;
       }
    }
@@ -368,6 +370,10 @@ body {
                font-size: 20px;
                padding: 0 8px;
                box-sizing: border-box;
+               &:focus {
+                  border: 3px solid red;
+                  outline-style: none;
+               }
             }
             textarea {
                width: 100%;
@@ -376,8 +382,12 @@ body {
                border: 1px solid black;
                border-radius: 10px;
                font-size: 20px;
-               padding: 0 8px;
+               padding: 4px;
                box-sizing: border-box;
+               &:focus {
+                  border: 3px solid red;
+                  outline-style: none;
+               }
             }
          }
 
@@ -396,16 +406,17 @@ body {
             font-family: 'Shippori Mincho', serif;
             transition: all 100ms;
          }
-         button:hover {
+         button:hover,
+         button:focus {
             background-color: red;
             transform: scale(1.05);
+            outline-style: none;
          }
          .feedback {
             font-family: 'Shippori Mincho', serif;
             text-align: center;
             color: rgb(231, 0, 0);
             font-size: 18px;
-            font-weight: bold;
             height: 60px;
          }
       }

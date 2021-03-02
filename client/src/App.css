@@ -31,7 +31,7 @@ body {
 .nav-main .logo {
   position: absolute;
   left: 30px;
-  font-weight: 800;
+  font-weight: 700;
   font-size: 16px;
   text-align: center;
 }
@@ -342,7 +342,8 @@ body {
   transition: all 200ms;
 }
 
-.portfolio .photo-grid img:hover {
+.portfolio .photo-grid img:hover,
+.portfolio .photo-grid img:focus {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
 }
@@ -373,7 +374,8 @@ body {
           text-decoration-color: red;
 }
 
-.contact .subtitle a:hover {
+.contact .subtitle a:hover,
+.contact .subtitle a:focus {
   color: red;
 }
 
@@ -459,6 +461,11 @@ body {
           box-sizing: border-box;
 }
 
+.contact .container form .grid-item input:focus {
+  border: 3px solid red;
+  outline-style: none;
+}
+
 .contact .container form .grid-item textarea {
   width: 100%;
   height: 181px;
@@ -466,9 +473,14 @@ body {
   border: 1px solid black;
   border-radius: 10px;
   font-size: 20px;
-  padding: 0 8px;
+  padding: 4px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+.contact .container form .grid-item textarea:focus {
+  border: 3px solid red;
+  outline-style: none;
 }
 
 .contact .container form button {
@@ -490,10 +502,12 @@ body {
   transition: all 100ms;
 }
 
-.contact .container form button:hover {
+.contact .container form button:hover,
+.contact .container form button:focus {
   background-color: red;
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
+  outline-style: none;
 }
 
 .contact .container form .feedback {
@@ -501,7 +515,6 @@ body {
   text-align: center;
   color: #e70000;
   font-size: 18px;
-  font-weight: bold;
   height: 60px;
 }
 
