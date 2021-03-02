@@ -6,13 +6,15 @@ const Index = () => {
       <div className='index'>
          <Nav />
          <header>
-            <h1 className='logo'>
+            <h1 className='logo1'>
                <span className='letter-spacing'>
                   <span className='caps'>R</span>ICKY <span className='caps'>K</span>ELLE
                </span>
                Y
-               <hr />
-               <span className='letter-spacing'>PHOTOGRAPH</span>Y
+            </h1>
+            <hr />
+            <h1 className='logo-line2'>
+               <span className='letter-spacing2'>PHOTOGRAPH</span>Y
             </h1>
          </header>
          <div className='preload' style={{ display: 'none' }}>

@@ -52,6 +52,7 @@ const Portfolio = () => {
                   alt='portfolio'
                   data-full={img.full}
                   data-id={img.id}
+                  loading='lazy'
                />
             ))}
          </div>

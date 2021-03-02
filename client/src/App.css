@@ -1,11 +1,14 @@
 body {
   min-height: 100%;
+  overflow-x: hidden;
 }
 
 .App {
   margin: 0;
   min-height: 100%;
   min-width: 100%;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
 }
 
 .App h2 {
@@ -118,12 +121,11 @@ body {
           filter: brightness(0.8);
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .index .nav-main {
   color: white;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.384)), to(rgba(110, 110, 110, 0)));
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.384), rgba(110, 110, 110, 0));
 }
 
 .index .nav-main .logo {
@@ -144,24 +146,34 @@ body {
 }
 
 .index header h1 {
-  font-family: 'Josefin Slab', serif;
-  font-size: 60px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 70px;
   margin: 0;
-  font-weight: 200;
+  font-weight: 300;
 }
 
 .index header h1 .letter-spacing {
-  letter-spacing: 0.5em;
+  letter-spacing: 0.4em;
 }
 
 .index header h1 .caps {
-  font-size: 80px;
+  font-size: 90px;
+}
+
+.index header .logo-line2 {
+  font-size: 60px;
+  font-weight: 300;
+}
+
+.index header .logo-line2 .letter-spacing2 {
+  letter-spacing: 0.5em;
 }
 
 .index header hr {
   border: none;
-  height: 0.5px;
+  height: 5px;
   background-color: white;
+  margin: 20px 0;
 }
 
 .portfolio {
@@ -186,7 +198,6 @@ body {
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
   z-index: 1;
-  margin: 4vh 2%;
   left: 0;
   top: 0;
   -webkit-box-pack: center;
@@ -195,9 +206,9 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: rgba(0, 0, 0, 0.39);
-  width: 96%;
-  height: 92vh;
+  background-color: rgba(0, 0, 0, 0.548);
+  width: 100%;
+  height: 100vh;
 }
 
 .portfolio .bigImage img {
@@ -327,8 +338,8 @@ body {
 }
 
 .portfolio .photo-grid img:hover {
-  -webkit-filter: grayscale(1);
-          filter: grayscale(1);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .contact {
@@ -495,73 +506,66 @@ body {
 
 .about .about-text {
   padding: 0 20px;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 @media only screen and (max-width: 900px) {
-  .nav-main {
-    color: #2c2c2c;
-    text-align: center;
-  }
   .nav-main .logo {
-    top: 20px;
+    position: static;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .nav-main nav {
-    padding-left: 0;
-    background-color: lightgray;
     color: #2c2c2c;
   }
-  .nav-main nav a {
-    border-color: #2c2c2c;
+  .index::before {
+    background-size: contain;
   }
-  .nav-main nav a li {
-    font-size: 24px;
-  }
-  .nav-main nav a li:hover hr {
-    opacity: 0;
-  }
-  .nav-main .burger div {
+  .index .nav-main nav a li hr {
     background-color: black;
   }
-  .index header h1 {
+  .index header .logo1 {
     font-size: 40px;
   }
-  .index header h1 .caps {
+  .index header .logo1 .caps {
     font-size: 60px;
   }
-  .index .nav-main .burger div {
-    background-color: white;
-  }
-  .portfolio nav a:nth-of-type(1) li {
-    color: #ebebe4;
-  }
-  .portfolio nav a:nth-of-type(1) li hr {
-    opacity: 0;
-  }
-  .contact nav a:nth-of-type(3) li {
-    color: #ebebe4;
-  }
-  .contact nav a:nth-of-type(3) li hr {
-    opacity: 0;
-  }
-  .about nav a:nth-of-type(2) li {
-    color: #ebebe4;
-  }
-  .about nav a:nth-of-type(2) li hr {
-    opacity: 0;
+  .index header .logo-line2 {
+    font-size: 34px;
   }
 }
 
 @media only screen and (max-width: 600px) {
-  .index header h1 {
+  .nav-main nav a li {
+    margin: 0 15px;
+  }
+  .index header .logo1 {
     font-size: 24px;
     font-weight: 600;
   }
-  .index header h1 .caps {
+  .index header .logo1 .caps {
     font-size: 32px;
   }
+  .index header .logo-line2 {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .index header hr {
+    height: 2px;
+    margin: 10px 0;
+  }
   .portfolio .photo-grid img {
-    height: 160px;
-    width: 160px;
+    height: 40vw;
+    width: 40vw;
   }
   .contact .container {
     width: 90vw;

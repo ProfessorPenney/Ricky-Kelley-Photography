@@ -25,17 +25,17 @@ const A = styled(Link)`
    flex-direction: column;
    justify-content: center;
    text-decoration: none;
-   @media only screen and (max-width: 900px) {
+   /* @media only screen and (max-width: 900px) {
       font-size: 20px;
       border-bottom: 1px white solid; // color
       height: 100%;
-      /* &:nth-of-type(1) { */
-      /* border-top: 1px white solid; // color */
-      /* } */
+      &:nth-of-type(1) {
+      border-top: 1px white solid; // color
+      }
       &:last-of-type {
          border-bottom: none;
       }
-   }
+   } */
 `
 
 const HrBurger = styled.div`
@@ -69,7 +69,7 @@ const DivBurger = styled.div`
    position: absolute;
    right: 0;
    top: 22px;
-   @media only screen and (max-width: 900px) {
+   /* @media only screen and (max-width: 900px) {
       display: block;
       position: ${props => (props.animate ? 'fixed' : 'absolute')};
       ${Hr1} {
@@ -77,14 +77,14 @@ const DivBurger = styled.div`
       }
       ${Hr2} {
          transform: ${props =>
-            props.animate ? 'translateY(-14px) translateX(-6px) rotate(-45deg)' : 'translateX(0)'};
+      props.animate ? 'translateY(-14px) translateX(-6px) rotate(-45deg)' : 'translateX(0)'};
       }
       ${Hr3} {
          transition: ${props =>
-            props.animate ? 'opacity 0.25s linear' : 'opacity 0.25s linear 0.75s'};
+      props.animate ? 'opacity 0.25s linear' : 'opacity 0.25s linear 0.75s'};
          opacity: ${props => (props.animate ? 0 : 1)};
       }
-   }
+   } */
 `
 
 const NavEl = styled.nav`
@@ -93,7 +93,8 @@ const NavEl = styled.nav`
    display: flex;
    justify-content: center;
    align-items: stretch;
-   @media only screen and (max-width: 900px) {
+   font-family: Arial, Helvetica, sans-serif;
+   /* @media only screen and (max-width: 900px) {
       z-index: 10;
       position: fixed;
       left: 100%;
@@ -113,7 +114,7 @@ const NavEl = styled.nav`
       ${A} {
          opacity: ${props => (props.animate ? 1 : 0)};
       }
-   }
+   } */
 `
 
 const Li = styled.li`
