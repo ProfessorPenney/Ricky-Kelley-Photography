@@ -93,7 +93,8 @@ const NavEl = styled.nav`
    display: flex;
    justify-content: center;
    align-items: stretch;
-   font-family: Arial, Helvetica, sans-serif;
+   font-family: 'Shippori Mincho', serif;
+   font-weight: 600;
    /* @media only screen and (max-width: 900px) {
       z-index: 10;
       position: fixed;
