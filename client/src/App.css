@@ -30,9 +30,9 @@ body {
 .nav-main .logo {
   position: absolute;
   left: 30px;
-  font-family: 'Josefin Slab', serif;
-  font-weight: 600;
+  font-weight: 800;
   font-size: 16px;
+  text-align: center;
 }
 
 .nav-main .logo div {
@@ -44,8 +44,12 @@ body {
   margin: 0;
 }
 
+.nav-main .logo div .second-line {
+  font-size: 15px;
+}
+
 .nav-main .logo div hr {
-  margin: 1px 0 7px;
+  margin: 1px 0 4px;
   height: 1px;
 }
 

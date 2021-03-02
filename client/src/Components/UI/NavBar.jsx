@@ -136,7 +136,7 @@ const Nav = ({ projects }) => {
                   Y
                </p>
                <hr />
-               <p>
+               <p className='second-line'>
                   <span className='letter-spacing'>PHOTOGRAPH</span>Y
                </p>
             </div>
