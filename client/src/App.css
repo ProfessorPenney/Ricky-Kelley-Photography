@@ -13,7 +13,7 @@ body {
 }
 
 .App h2 {
-  margin: 25vh 0 0;
+  margin: 200px 0 0;
   text-align: center;
   font-size: 45px;
 }
@@ -134,7 +134,8 @@ body {
 }
 
 .index .nav-main .logo {
-  display: none;
+  opacity: 0;
+  cursor: auto;
 }
 
 .index .nav-main nav a li div {
@@ -538,8 +539,7 @@ body {
 }
 
 @media only screen and (max-width: 900px) {
-  .nav-main .logo {
-    position: static;
+  .nav-main {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -550,6 +550,12 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(whitesmoke), color-stop(whitesmoke), to(rgba(255, 255, 255, 0)));
+    background-image: linear-gradient(to bottom, whitesmoke, whitesmoke, rgba(255, 255, 255, 0));
+  }
+  .nav-main .logo {
+    position: static;
+    margin-bottom: 12px;
   }
   .nav-main nav {
     color: #2c2c2c;
@@ -568,6 +574,16 @@ body {
   }
   .index header .logo-line2 {
     font-size: 34px;
+  }
+}
+
+@media only screen and (max-width: 900px) and (max-height: 500px) {
+  .index .nav-main {
+    background-image: none;
+  }
+  .index .nav-main nav {
+    color: white;
+    margin-top: -50px;
   }
 }
 

@@ -7,7 +7,7 @@ const DivMain = styled.div`
    top: 0;
    left: 0;
    width: 100vw;
-   height: 60px;
+   /* height: 60px; */
    color: rgb(44, 44, 44);
 `
 
@@ -89,7 +89,7 @@ const DivBurger = styled.div`
 
 const NavEl = styled.nav`
    width: 100%;
-   height: 100%;
+   height: 60px;
    display: flex;
    justify-content: center;
    align-items: stretch;

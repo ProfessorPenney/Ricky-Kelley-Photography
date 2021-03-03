@@ -24,5 +24,6 @@ yarn-error.log*
 
 #archived and named pictures
 /src/IMG/portfolio-large
-/portfolio-original
-/portfolio-small
+/src/IMG/portfolio-original
+/src/IMG/portfolio-small
+/src/IMG/landscapes

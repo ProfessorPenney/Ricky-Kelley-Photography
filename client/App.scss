@@ -11,7 +11,7 @@ body {
    font-weight: 500;
 
    h2 {
-      margin: 25vh 0 0;
+      margin: 200px 0 0;
       text-align: center;
       font-size: 45px;
    }
@@ -114,7 +114,8 @@ body {
       color: white;
 
       .logo {
-         display: none;
+         opacity: 0;
+         cursor: auto;
       }
 
       nav a li div {
@@ -446,12 +447,18 @@ body {
 
 @media only screen and (max-width: 900px) {
    .nav-main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-image: linear-gradient(
+         to bottom,
+         rgb(245, 245, 245),
+         rgb(245, 245, 245),
+         rgba(255, 255, 255, 0)
+      );
       .logo {
          position: static;
-         display: flex;
-         flex-direction: column;
-         // justify-items: center;
-         align-items: center;
+         margin-bottom: 12px;
       }
       //    text-align: center;
       //    .logo {
@@ -538,6 +545,18 @@ body {
    //       }
    //    }
    // }
+   @media only screen and (max-height: 500px) {
+      .index .nav-main {
+         background-image: none;
+         nav {
+            color: white;
+            margin-top: -50px;
+         }
+      }
+   }
+}
+
+@media only screen and (max-width: 750px) {
 }
 
 @media only screen and (max-width: 600px) {
