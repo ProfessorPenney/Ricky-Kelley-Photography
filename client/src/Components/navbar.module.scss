@@ -1,0 +1,80 @@
+.nav-main {
+   color: rgb(44, 44, 44);
+   padding-top: 2vh;
+
+   .logo {
+      position: absolute;
+      left: 30px;
+      font-weight: 700;
+      font-size: 16px;
+      text-align: center;
+      div {
+         border: 1px solid black;
+         padding: 8px 7px 5px 8px;
+         p {
+            margin: 0;
+         }
+         .second-line {
+            font-size: 15px;
+         }
+         hr {
+            margin: 1px 0 4px;
+            height: 1px;
+         }
+      }
+
+      .letter-spacing {
+         letter-spacing: 0.3em;
+      }
+      .letter-spacing2 {
+         letter-spacing: 0.25em;
+      }
+      .caps {
+         font-size: 20px;
+      }
+
+      hr {
+         border: none;
+         height: 2px;
+         background-color: rgb(44, 44, 44);
+         margin: 4px 0;
+      }
+   }
+   nav {
+      font-family: 'Shippori Mincho', serif;
+      font-weight: 600;
+   }
+   a {
+      li {
+         font-size: 20px;
+
+         hr {
+            width: 0;
+            opacity: 0;
+            transition: opacity 400ms linear, width 1ms linear 400ms;
+            background-color: rgb(44, 44, 44);
+            height: 2px;
+            border-radius: 2px;
+            margin: 2px auto 0;
+         }
+         &:hover {
+            hr {
+               opacity: 1;
+               width: 100%;
+               transition: opacity 100ms linear, width 300ms ease-in-out;
+            }
+         }
+      }
+   }
+}
+.index {
+   .logo {
+      opacity: 0;
+   }
+   a {
+      color: white;
+      li hr {
+         background-color: white;
+      }
+   }
+}
