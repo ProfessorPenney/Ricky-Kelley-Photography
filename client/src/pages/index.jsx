@@ -25,15 +25,15 @@ const Index = () => {
                <span className={indexStyles.letterSpacing2}>PHOTOGRAPH</span>Y
             </h1>
          </header>
-         <div className='preload'>
-            <img src='../IMG/Slideshow/1.jpg' alt='' loading='eager' width='1600' height='1066' />
-            <img src='../IMG/Slideshow/2.jpg' alt='' loading='eager' width='1600' height='1066' />
-            <img src='../IMG/Slideshow/3.jpg' alt='' loading='eager' width='1600' height='1066' />
+         {/* <div className='preload'>
+            <img src='../IMG/Slideshow/1.jpg.default' alt='' loading='eager' width='1600' height='1066' />
+            <img src='../IMG/Slideshow/2.jpg.default' alt='' loading='eager' width='1600' height='1066' />
+            <img src='../IMG/Slideshow/3.jpg.default' alt='' loading='eager' width='1600' height='1066' />
             <img src='../IMG/Slideshow/4.jpg' alt='' loading='eager' width='1500' height='1000' />
             <img src='../IMG/Slideshow/5.jpg' alt='' loading='eager' width='1500' height='1000' />
             <img src='../IMG/Slideshow/6.jpg' alt='' loading='eager' width='1500' height='1000' />
             <img src='../IMG/Slideshow/7.jpg' alt='' loading='eager' width='1500' height='1000' />
-         </div>
+         </div> */}
       </div>
    )
 }
