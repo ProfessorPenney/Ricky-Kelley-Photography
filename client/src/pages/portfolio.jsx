@@ -1,10 +1,13 @@
 import React, { useState } from 'react'
+import { StaticImage } from 'gatsby-plugin-image'
 
 import Head from '../Components/Head'
 import NavBar from '../Components/NavBar'
+
 import '../styles/App.scss'
 import * as portfolioStyles from './portfolio.module.scss'
-// import images from '../../images.js'
+
+import images from '../data/images.js'
 
 const Portfolio = () => {
    const [bigPic, setBigPic] = useState(false)
@@ -25,6 +28,8 @@ const Portfolio = () => {
       else setBigPic(prevPic => prevPic - 1)
    }
 
+   const testImage = '../IMG/faces_of_ricky.jpg'
+
    return (
       <div className={`${portfolioStyles.portfolio} portfolio`}>
          <Head title='Portfolio' />
@@ -36,7 +41,11 @@ const Portfolio = () => {
                   <hr className='top' />
                   <hr className='bottom' />
                </div>
-               <img src={images[bigPic - 1].full} alt='portfolio pic' />
+               <StaticImage
+                  src={images[bigPic - 1].full}
+                  alt='portfolio pic'
+                  placeholder='blurred'
+               />
                <div className='right arrow' onClick={e => scrollRight(e)}>
                   <hr className='top' />
                   <hr className='bottom' />
@@ -47,9 +56,10 @@ const Portfolio = () => {
                </div>
             </div>
          )}
-         {/* <div className={`${portfolioStyles.photoGrid}`}>
+         <div className={`${portfolioStyles.photoGrid}`}>
+            <StaticImage src={testImage} />
             {images.map(img => (
-               <img
+               <StaticImage
                   onClick={e => showPic(e)}
                   key={img.id}
                   src={img.src}
@@ -60,7 +70,7 @@ const Portfolio = () => {
                   loading='lazy'
                />
             ))}
-         </div> */}
+         </div>
       </div>
    )
 }

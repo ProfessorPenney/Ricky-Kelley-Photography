@@ -124,3 +124,14 @@
       }
    }
 }
+
+@media only screen and (max-width: 600px) {
+   .portfolio {
+      .photo-grid {
+         img {
+            height: 40vw;
+            width: 40vw;
+         }
+      }
+   }
+}

@@ -59,6 +59,50 @@
    }
 }
 
+@media only screen and (max-width: 900px) {
+   .index {
+      &::before {
+         background-size: contain;
+      }
+      .nav-main nav a li hr {
+         background-color: black;
+      }
+      header {
+         .logo1 {
+            font-size: 40px;
+            .caps {
+               font-size: 60px;
+            }
+         }
+         .logo-line2 {
+            font-size: 34px;
+         }
+      }
+   }
+}
+
+@media only screen and (max-width: 600px) {
+   .index {
+      header {
+         h1 {
+            font-size: 24px;
+            font-weight: 600;
+            .caps {
+               font-size: 32px;
+            }
+         }
+         .logo-line2 {
+            font-size: 20px;
+            font-weight: 600;
+         }
+         hr {
+            height: 2px;
+            margin: 10px 0;
+         }
+      }
+   }
+}
+
 @keyframes indexBackground {
    0%,
    13% {

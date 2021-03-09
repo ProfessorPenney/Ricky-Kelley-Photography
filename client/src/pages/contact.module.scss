@@ -135,6 +135,26 @@
    }
 }
 
+@media only screen and (max-width: 600px) {
+   .contact {
+      .container {
+         width: 90vw;
+         form {
+            flex-flow: column;
+            width: 100%;
+            div {
+               width: 100%;
+            }
+            .grid-item {
+               width: 100%;
+               margin-left: 0;
+               margin-right: 0;
+            }
+         }
+      }
+   }
+}
+
 @keyframes bounce {
    0%,
    4%,

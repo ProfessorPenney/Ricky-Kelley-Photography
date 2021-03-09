@@ -130,8 +130,8 @@ const Nav = ({ page = '' }) => {
    // const [mobileMenu, setMobileMenu] = useState(false)
 
    return (
-      <DivMain className={`${navStyles.navMain} ${navStyles[page]} nav-main`}>
-         <Link to='/' title='Home' className={`${navStyles.logo} logo`}>
+      <DivMain className={`${navStyles.navMain} ${navStyles[page]}`}>
+         <Link to='/' title='Home' className={navStyles.logo}>
             <div>
                <p>
                   <span className={navStyles.letterSpacing}>
