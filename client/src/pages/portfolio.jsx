@@ -18,30 +18,34 @@ const Portfolio = () => {
 
    const scrollRight = e => {
       e.stopPropagation()
-      if (bigPic === images.length) setBigPic(1)
+      if (bigPic === 63) setBigPic(1)
       else setBigPic(prevPic => prevPic + 1)
    }
 
    const scrollLeft = e => {
       e.stopPropagation()
-      if (bigPic === 1) setBigPic(images.length)
+      if (bigPic === 1) setBigPic(63)
       else setBigPic(prevPic => prevPic - 1)
    }
 
    return (
-      <div className={`${portfolioStyles.portfolio} portfolio`}>
+      <div className={portfolioStyles.portfolio}>
          <Head title='Portfolio' />
          <NavBar />
          {bigPic && (
-            <div className={`${portfolioStyles.bigImage}`} onClick={() => setBigPic(false)}>
-               <div className='left arrow' onClick={e => scrollLeft(e)}>
-                  <hr className='top' />
-                  <hr className='bottom' />
+            <div className={portfolioStyles.bigImage} onClick={() => setBigPic(false)}>
+               <div
+                  className={`${portfolioStyles.left} ${portfolioStyles.arrow}`}
+                  onClick={e => scrollLeft(e)}>
+                  <hr />
+                  <hr />
                </div>
-               <img src={largeImages[bigPic - 1]} alt='large img' loading='eager' />
-               <div className='right arrow' onClick={e => scrollRight(e)}>
-                  <hr className='top' />
-                  <hr className='bottom' />
+               <img src={largeImages[bigPic - 1]} alt='large img' />
+               <div
+                  className={`${portfolioStyles.right} ${portfolioStyles.arrow}`}
+                  onClick={e => scrollRight(e)}>
+                  <hr />
+                  <hr />
                </div>
                <div className={`${portfolioStyles.closePic}`}>
                   <hr />

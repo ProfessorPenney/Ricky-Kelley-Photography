@@ -30,21 +30,27 @@
          box-sizing: border-box;
       }
 
-      .close-pic {
+      div {
          position: fixed;
-         top: 80px;
-         right: 5%;
          border-radius: 4px;
          border: 2px solid transparent;
+      }
+
+      hr {
+         background-color: rgb(172, 172, 172);
+         height: 8px;
+         border-radius: 4px;
+         border: none;
+      }
+
+      .close-pic {
+         top: 80px;
+         right: 5%;
          padding: 0 8px 14px;
 
          hr {
             transform-origin: center;
-            background-color: rgb(172, 172, 172);
             width: 40px;
-            border: none;
-            height: 8px;
-            border-radius: 10px;
          }
          hr:nth-of-type(1) {
             transform: translateY(16px) rotate(45deg);
@@ -52,29 +58,16 @@
          hr:nth-of-type(2) {
             transform: rotate(-45deg);
          }
-         &:hover {
-            cursor: pointer;
-            border: 2px solid rgb(223, 223, 223);
-            hr {
-               background-color: rgb(223, 223, 223);
-            }
-         }
       }
 
       .arrow {
-         position: fixed;
-         border-radius: 4px;
-         border: 2px solid transparent;
          padding: 8px 12px;
          hr {
-            height: 8px;
-            border-radius: 10px;
             width: 30px;
-            background-color: rgb(172, 172, 172);
-            border: none;
          }
       }
-      .arrow:hover {
+      .arrow:hover,
+      .close-pic:hover {
          cursor: pointer;
          border: 2px solid rgb(223, 223, 223);
          hr {
@@ -84,19 +77,19 @@
 
       .left {
          left: 5%;
-         .bottom {
+         hr:nth-of-type(2) {
             transform: rotate(45deg);
          }
-         .top {
+         hr:nth-of-type(1) {
             transform: rotate(-45deg);
          }
       }
       .right {
          right: 5%;
-         .bottom {
+         hr:nth-of-type(2) {
             transform: rotate(135deg);
          }
-         .top {
+         hr:nth-of-type(1) {
             transform: rotate(45deg);
          }
       }
