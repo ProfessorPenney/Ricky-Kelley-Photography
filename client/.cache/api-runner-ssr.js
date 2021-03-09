@@ -3,6 +3,10 @@ var plugins = [{
       plugin: require('C:/Users/Kevin/Web projects/ricky-portfolio/client/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
       options: {"plugins":[]},
     },{
+      name: 'gatsby-plugin-styled-components',
+      plugin: require('C:/Users/Kevin/Web projects/ricky-portfolio/client/node_modules/gatsby-plugin-styled-components/gatsby-ssr'),
+      options: {"plugins":[],"displayName":true,"fileName":true,"minify":true,"namespace":"","transpileTemplateLiterals":true,"topLevelImportPaths":[],"pure":false},
+    },{
       name: 'gatsby-plugin-image',
       plugin: require('C:/Users/Kevin/Web projects/ricky-portfolio/client/node_modules/gatsby-plugin-image/gatsby-ssr'),
       options: {"plugins":[]},
