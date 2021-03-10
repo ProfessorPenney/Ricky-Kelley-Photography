@@ -3,9 +3,10 @@ import React, { useState } from 'react'
 import Head from '../Components/Head'
 import NavBar from '../Components/NavBar'
 import ArrowImg from '../Components/ArrowImg'
+
+import '@fontsource/cormorant-garamond/700.css'
 import '../styles/App.scss'
 import * as contactStyles from './contact.module.scss'
-import '@fontsource/cormorant-garamond/700.css'
 
 const Contact = () => {
    const [feedback, setFeedback] = useState('')

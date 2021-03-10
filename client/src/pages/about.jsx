@@ -2,10 +2,11 @@ import React from 'react'
 
 import Head from '../Components/Head'
 import NavBar from '../Components/NavBar'
-import '../styles/App.scss'
-import * as aboutStyles from './about.module.scss'
+
 import '@fontsource/shippori-mincho/400.css'
 import '@fontsource/cormorant-garamond/700.css'
+import '../styles/App.scss'
+import * as aboutStyles from './about.module.scss'
 
 const About = () => {
    return (
