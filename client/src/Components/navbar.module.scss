@@ -39,6 +39,10 @@
          background-color: rgb(44, 44, 44);
          margin: 4px 0;
       }
+
+      &:hover {
+         box-shadow: 0 0 4px black;
+      }
    }
    nav {
       font-family: 'Shippori Mincho', serif;
