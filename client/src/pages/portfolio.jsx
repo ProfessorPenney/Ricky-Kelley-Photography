@@ -2,12 +2,11 @@ import React, { useState } from 'react'
 
 import Head from '../Components/Head'
 import NavBar from '../Components/NavBar'
-import PortfolioGrid from '../Components/PortfolioGrid'
 
 import '../styles/App.scss'
 import * as portfolioStyles from './portfolio.module.scss'
 
-import largeImages from '../data/images'
+import images from '../data/images'
 
 const Portfolio = () => {
    const [bigPic, setBigPic] = useState(false)
@@ -40,7 +39,7 @@ const Portfolio = () => {
                   <hr />
                   <hr />
                </div>
-               <img src={largeImages[bigPic - 1]} alt='large img' />
+               <img src={images[bigPic - 1].full} alt='Detailed' />
                <div
                   className={`${portfolioStyles.right} ${portfolioStyles.arrow}`}
                   onClick={e => scrollRight(e)}>
@@ -54,7 +53,16 @@ const Portfolio = () => {
             </div>
          )}
          <div className={`${portfolioStyles.photoGrid}`}>
-            <PortfolioGrid showPic={showPic} setBigPic={setBigPic} />
+            {images.map((pic, i) => (
+               <img
+                  onClick={e => showPic(e)}
+                  key={i}
+                  src={pic.src}
+                  alt='Thumbnail'
+                  data-id={i + 1}
+                  loading={i < 8 ? 'eager' : 'lazy'}
+               />
+            ))}
          </div>
       </div>
    )
