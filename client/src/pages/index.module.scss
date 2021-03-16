@@ -9,9 +9,10 @@
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   &::before {
-      content: '';
-      animation: indexBackground 60s infinite;
+   // &::before {
+   div {
+      // content: '';
+      // animation: indexBackground 60s infinite;
       height: 100%;
       width: 100%;
       position: absolute;
@@ -21,14 +22,44 @@
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
-      background-image: url('../IMG/Slideshow/1.jpg');
+      // background-image: url('../IMG/Slideshow/1.jpg');
    }
-   &::after {
-      content: '';
-      z-index: -1;
+
+   .bg1 {
+      background-image: url('../IMG//Slideshow//1.jpg');
+      animation: animateBG1 60s infinite;
+   }
+   .bg2 {
       opacity: 0;
-      animation: indexBackgroundLoader 60s;
+      animation: animateBG2 60s infinite;
    }
+   .bg3 {
+      opacity: 0;
+      animation: animateBG3 60s infinite;
+   }
+   .bg4 {
+      opacity: 0;
+      animation: animateBG4 60s infinite;
+   }
+   .bg5 {
+      opacity: 0;
+      animation: animateBG5 60s infinite;
+   }
+   .bg6 {
+      opacity: 0;
+      animation: animateBG6 60s infinite;
+   }
+   .bg7 {
+      opacity: 0;
+      animation: animateBG7 60s infinite;
+   }
+
+   // &::after {
+   //    content: '';
+   //    z-index: -1;
+   //    opacity: 0;
+   //    animation: indexBackgroundLoader 60s;
+   // }
 
    header {
       position: relative;
@@ -112,66 +143,149 @@
    }
 }
 
-@keyframes indexBackground {
-   0%,
-   13% {
-      background-image: url('../IMG/Slideshow/1.jpg');
+@keyframes animateBG1 {
+   13%,
+   100% {
+      opacity: 1;
    }
    16%,
-   27% {
-      background-image: url('../IMG/Slideshow/2.jpg');
-   }
-   30%,
-   41% {
-      background-image: url('../IMG/Slideshow/3.jpg');
-   }
-   44%,
-   55% {
-      background-image: url('../IMG/Slideshow/4.jpg');
-   }
-   58%,
-   69% {
-      background-image: url('../IMG/Slideshow/5.jpg');
-   }
-   72%,
-   83% {
-      background-image: url('../IMG/Slideshow/6.jpg');
-   }
-   86%,
    97% {
-      background-image: url('../IMG/Slideshow/7.jpg');
-   }
-   100% {
-      background-image: url('../IMG/Slideshow/1.jpg');
+      opacity: 0;
    }
 }
 
-@keyframes indexBackgroundLoader {
-   0%,
-   5% {
-      background-image: none;
+@keyframes animateBG2 {
+   13%,
+   30% {
+      background-image: url('../IMG//Slideshow//2.jpg');
+      opacity: 0;
    }
-   6%,
-   19% {
-      background-image: url('../IMG/Slideshow/2.jpg');
-   }
-   20%,
-   33% {
-      background-image: url('../IMG/Slideshow/3.jpg');
-   }
-   34%,
-   47% {
-      background-image: url('../IMG/Slideshow/4.jpg');
-   }
-   48%,
-   61% {
-      background-image: url('../IMG/Slideshow/5.jpg');
-   }
-   62%,
-   75% {
-      background-image: url('../IMG/Slideshow/6.jpg');
-   }
-   76% {
-      background-image: url('../IMG/Slideshow/7.jpg');
+   16%,
+   27% {
+      opacity: 1;
    }
 }
+
+@keyframes animateBG3 {
+   27%,
+   44% {
+      background-image: url('../IMG//Slideshow//3.jpg');
+      opacity: 0;
+   }
+   30%,
+   41% {
+      opacity: 1;
+   }
+}
+
+@keyframes animateBG4 {
+   41%,
+   58% {
+      background-image: url('../IMG//Slideshow//4.jpg');
+      opacity: 0;
+   }
+   44%,
+   55% {
+      opacity: 1;
+   }
+}
+
+@keyframes animateBG5 {
+   55%,
+   72% {
+      background-image: url('../IMG//Slideshow//5.jpg');
+      opacity: 0;
+   }
+   58%,
+   69% {
+      opacity: 1;
+   }
+}
+
+@keyframes animateBG6 {
+   69%,
+   86% {
+      background-image: url('../IMG//Slideshow//6.jpg');
+      opacity: 0;
+   }
+   72%,
+   83% {
+      opacity: 1;
+   }
+}
+
+@keyframes animateBG7 {
+   83%,
+   100% {
+      background-image: url('../IMG//Slideshow//7.jpg');
+      opacity: 0;
+   }
+   86%,
+   97% {
+      opacity: 1;
+   }
+}
+
+// @keyframes indexBackground {
+//    0%,
+//    13% {
+//       background-image: url('../IMG/Slideshow/1.jpg');
+//    }
+//    16%,
+//    27% {
+//       background-image: url('../IMG/Slideshow/2.jpg');
+//    }
+//    30%,
+//    41% {
+//       background-image: url('../IMG/Slideshow/3.jpg');
+//    }
+//    44%,
+//    55% {
+//       background-image: url('../IMG/Slideshow/4.jpg');
+//    }
+//    58%,
+//    69% {
+//       background-image: url('../IMG/Slideshow/5.jpg');
+//    }
+//    72%,
+//    83% {
+//       background-image: url('../IMG/Slideshow/6.jpg');
+//    }
+//    86%,
+//    97% {
+//       background-image: url('../IMG/Slideshow/7.jpg');
+//    }
+//    100% {
+//       background-image: url('../IMG/Slideshow/1.jpg');
+//    }
+// }
+
+// @keyframes indexBackgroundLoader {
+//    0%,
+//    5% {
+//       background-image: none;
+//    }
+//    6%,
+//    19% {
+//       background-image: url('../IMG/Slideshow/2.jpg');
+//    }
+//    20%,
+//    33% {
+//       background-image: url('../IMG/Slideshow/3.jpg');
+//    }
+//    34%,
+//    47% {
+//       background-image: url('../IMG/Slideshow/4.jpg');
+//    }
+//    48%,
+//    61% {
+//       background-image: url('../IMG/Slideshow/5.jpg');
+//    }
+//    62%,
+//    75% {
+//       background-image: url('../IMG/Slideshow/6.jpg');
+//    }
+//    76% {
+//       background-image: url('../IMG/Slideshow/7.jpg');
+//    }
+// }

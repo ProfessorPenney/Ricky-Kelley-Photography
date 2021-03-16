@@ -10,6 +10,13 @@ import '@fontsource/cormorant-garamond/300.css'
 const Index = () => {
    return (
       <div className={indexStyles.index}>
+         <div className={indexStyles.bg1} />
+         <div className={indexStyles.bg2} />
+         <div className={indexStyles.bg3} />
+         <div className={indexStyles.bg4} />
+         <div className={indexStyles.bg5} />
+         <div className={indexStyles.bg6} />
+         <div className={indexStyles.bg7} />
          <Head title='Home' />
          <NavBar page='index' />
          <header>
