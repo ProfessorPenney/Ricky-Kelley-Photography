@@ -7,6 +7,21 @@
           "options": {}
         },
         {
+          "name": "babel-plugin-styled-components",
+          "stage": "develop",
+          "options": {
+            "plugins": [],
+            "displayName": true,
+            "fileName": true,
+            "minify": true,
+            "namespace": "",
+            "transpileTemplateLiterals": true,
+            "topLevelImportPaths": [],
+            "pure": false,
+            "ssr": false
+          }
+        },
+        {
           "name": "C:\\Users\\Kevin\\Web projects\\ricky-portfolio\\client\\node_modules\\@babel\\plugin-proposal-optional-chaining\\lib\\index.js",
           "options": {}
         },
@@ -52,6 +67,21 @@
         {
           "name": "C:\\Users\\Kevin\\Web projects\\ricky-portfolio\\client\\node_modules\\@babel\\plugin-proposal-numeric-separator\\lib\\index.js",
           "options": {}
+        },
+        {
+          "name": "babel-plugin-styled-components",
+          "stage": "develop-html",
+          "options": {
+            "plugins": [],
+            "displayName": true,
+            "fileName": true,
+            "minify": true,
+            "namespace": "",
+            "transpileTemplateLiterals": true,
+            "topLevelImportPaths": [],
+            "pure": false,
+            "ssr": false
+          }
         }
       ],
       "presets": [
@@ -87,6 +117,21 @@
         {
           "name": "C:\\Users\\Kevin\\Web projects\\ricky-portfolio\\client\\node_modules\\@babel\\plugin-proposal-numeric-separator\\lib\\index.js",
           "options": {}
+        },
+        {
+          "name": "babel-plugin-styled-components",
+          "stage": "build-html",
+          "options": {
+            "plugins": [],
+            "displayName": true,
+            "fileName": true,
+            "minify": true,
+            "namespace": "",
+            "transpileTemplateLiterals": true,
+            "topLevelImportPaths": [],
+            "pure": false,
+            "ssr": true
+          }
         }
       ],
       "presets": [
@@ -122,6 +167,21 @@
         {
           "name": "C:\\Users\\Kevin\\Web projects\\ricky-portfolio\\client\\node_modules\\@babel\\plugin-proposal-numeric-separator\\lib\\index.js",
           "options": {}
+        },
+        {
+          "name": "babel-plugin-styled-components",
+          "stage": "build-javascript",
+          "options": {
+            "plugins": [],
+            "displayName": true,
+            "fileName": true,
+            "minify": true,
+            "namespace": "",
+            "transpileTemplateLiterals": true,
+            "topLevelImportPaths": [],
+            "pure": false,
+            "ssr": true
+          }
         }
       ],
       "presets": [

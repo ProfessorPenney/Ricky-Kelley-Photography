@@ -75,10 +75,14 @@
    .logo {
       opacity: 0;
    }
-   a {
+   nav {
       color: white;
-      li hr {
-         background-color: white;
+      text-shadow: 0px 0px 4px black;
+      a {
+         li hr {
+            background-color: white;
+            box-shadow: 0 0 1px black;
+         }
       }
    }
 }
@@ -98,18 +102,22 @@
          position: static;
          margin-bottom: 12px;
       }
-      a {
+      nav {
          color: rgb(44, 44, 44);
-         li hr {
-            background-color: rgb(44, 44, 44);
+         text-shadow: none;
+         a {
+            li hr {
+               background-color: rgb(44, 44, 44);
+            }
          }
       }
    }
    @media only screen and (max-height: 500px) {
-      .index .nav-main {
+      .index {
          background-image: none;
          nav {
             color: white;
+            text-shadow: 0px 0px 4px black;
             margin-top: -50px;
          }
       }

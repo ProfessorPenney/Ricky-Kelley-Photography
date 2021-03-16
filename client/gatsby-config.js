@@ -8,7 +8,8 @@ module.exports = {
    },
    plugins: [
       'gatsby-plugin-sass',
-      'gatsby-plugin-react-helmet'
+      'gatsby-plugin-react-helmet',
+      'gatsby-plugin-styled-components'
       // {
       //    resolve: 'gatsby-source-filesystem',
       //    options: {
@@ -16,7 +17,6 @@ module.exports = {
       //       path: `${__dirname}/src/IMG/portfolio-tiny`
       //    }
       // },
-      // 'gatsby-plugin-styled-components',
       // {
       //    resolve: `gatsby-plugin-sharp`,
       //    options: {
