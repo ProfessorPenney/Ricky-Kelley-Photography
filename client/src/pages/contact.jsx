@@ -29,6 +29,23 @@ const Contact = () => {
          setEmail('')
          setPhone('')
          setMessage('')
+         // const details = {
+         //    'entry.2005620554': name,
+         //    'entry.1045781291': email,
+         //    'entry.839337160': phone,
+         //    'entry.839337160': message
+         // }
+         // const formBody = Object.keys(details)
+         //    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(details[key]))
+         //    .join('&')
+         // fetch(
+         //    'https://docs.google.com/forms/d/e/1FAIpQLSekePWwmvlpIxjDkleo95lzk5nC-pD5Y3p9UjIRwvRbozfycg/viewform',
+         //    {
+         //       method: 'POST',
+         //       headers: { 'Content-type': 'x-www-form-urlencoded;charset=UTF-8' },
+         //       body: formBody
+         //    }
+         // )
          fetch('/contactform', {
             method: 'POST',
             headers: { 'Content-type': 'application/json' },
@@ -54,14 +71,72 @@ const Contact = () => {
          <p className={contactStyles.subtitle}>
             <ArrowImg />
          </p>
+         {/* <iframe
+            src='https://docs.google.com/forms/d/e/1FAIpQLSekePWwmvlpIxjDkleo95lzk5nC-pD5Y3p9UjIRwvRbozfycg/viewform?embedded=true'
+            width='640'
+            height='853'
+            frameborder='0'
+            marginheight='0'
+            marginwidth='0'>
+            Loading…
+         </iframe> */}
+         {/* <iframe
+            className={contactStyles.container}
+            src='about:blank'
+            title='Contact Form'
+            width='100%'
+            height='100%'
+            srcDoc="<form action='https://docs.google.com/forms/u/0/d/e/1FAIpQLSekePWwmvlpIxjDkleo95lzk5nC-pD5Y3p9UjIRwvRbozfycg/formResponse'>
+            <div>
+               <label>
+                  Name:
+                  <input
+                     name='entry.2005620554'
+                     type='text'
+                  />
+               </label>
+               <label>
+                  Email:
+                  <input
+                     name='entry.1045781291'
+                     type='email'
+                  />
+               </label>
+               <label>
+                  Phone:
+                  <input
+                     name='entry.1166974658'
+                     type='phone'
+                  />
+               </label>
+            </div>
+            <div>
+               <label>
+                  Message:
+                  <textarea name='entry.839337160' placeholder='fart'/>
+               </label>
+               <div className={contactStyles.feedback}>
+                  <p>{feedback}</p>
+               </div>
+               <button
+                  type='submit'
+               >
+                  SUBMIT
+               </button>
+            </div>
+         </form>">
+         </iframe> */}
          <div className={contactStyles.container}>
-            <form>
+            <form
+            // action='https://docs.google.com/forms/u/0/d/e/1FAIpQLSekePWwmvlpIxjDkleo95lzk5nC-pD5Y3p9UjIRwvRbozfycg/formResponse'
+            >
                <div>
                   <label>
                      Name:
                      <input
                         value={name}
-                        name='name'
+                        // name='name'
+                        name='entry.2005620554'
                         type='text'
                         onChange={e => setName(e.target.value)}
                      />
@@ -71,6 +146,7 @@ const Contact = () => {
                      <input
                         value={email}
                         name='email'
+                        // name='entry.1045781291'
                         type='email'
                         onChange={e => setEmail(e.target.value)}
                      />
@@ -80,6 +156,7 @@ const Contact = () => {
                      <input
                         value={phone}
                         name='phone'
+                        // name='entry.1166974658'
                         type='phone'
                         onChange={e => setPhone(e.target.value)}
                      />
@@ -91,6 +168,7 @@ const Contact = () => {
                      <textarea
                         value={message}
                         name='message'
+                        // name='entry.839337160'
                         onChange={e => setMessage(e.target.value)}
                      />
                   </label>
