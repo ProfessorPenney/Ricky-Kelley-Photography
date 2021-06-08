@@ -1,2 +1,0 @@
-(self.webpackChunkricky_portfolio=self.webpackChunkricky_portfolio||[]).push([[256],{1657:function(e,t,l){"use strict";l.r(t);var n=l(7294),r=l(5444),c=l(7494),u=l(5481);t.default=function(){return n.createElement("div",null,n.createElement(c.Z,{title:"404"}),n.createElement(u.Z,null),n.createElement("h2",null,"Page Not Found"),n.createElement("p",null,n.createElement(r.rU,{to:"/"},"Head Home")))}}}]);
-//# sourceMappingURL=component---src-pages-404-jsx-f5c5970163a24ecc67be.js.map

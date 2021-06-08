@@ -15,8 +15,8 @@ const Contact = () => {
    const [phone, setPhone] = useState('')
    const [message, setMessage] = useState('')
 
-   const buttonClick = e => {
-      e.preventDefault()
+   const buttonClick = () => {
+      // e.preventDefault()
       if (name === '') {
          setFeedback('Please enter your name.')
       } else if (email === '' && phone === '') {
@@ -29,33 +29,18 @@ const Contact = () => {
          setEmail('')
          setPhone('')
          setMessage('')
-         // const details = {
-         //    'entry.2005620554': name,
-         //    'entry.1045781291': email,
-         //    'entry.839337160': phone,
-         //    'entry.839337160': message
-         // }
-         // const formBody = Object.keys(details)
-         //    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(details[key]))
-         //    .join('&')
-         // fetch(
-         //    'https://docs.google.com/forms/d/e/1FAIpQLSekePWwmvlpIxjDkleo95lzk5nC-pD5Y3p9UjIRwvRbozfycg/viewform',
-         //    {
-         //       method: 'POST',
-         //       headers: { 'Content-type': 'x-www-form-urlencoded;charset=UTF-8' },
-         //       body: formBody
-         //    }
-         // )
-         fetch('/contactform', {
-            method: 'POST',
-            headers: { 'Content-type': 'application/json' },
-            body: JSON.stringify({
-               name,
-               email,
-               phone,
-               message
-            })
-         })
+         document.querySelector('.contact-form').submit()
+
+         // fetch('/contactform', {
+         //    method: 'POST',
+         //    headers: { 'Content-type': 'application/json' },
+         //    body: JSON.stringify({
+         //       name,
+         //       email,
+         //       phone,
+         //       message
+         //    })
+         // })
       }
    }
 
@@ -71,72 +56,26 @@ const Contact = () => {
          <p className={contactStyles.subtitle}>
             <ArrowImg />
          </p>
-         {/* <iframe
-            src='https://docs.google.com/forms/d/e/1FAIpQLSekePWwmvlpIxjDkleo95lzk5nC-pD5Y3p9UjIRwvRbozfycg/viewform?embedded=true'
-            width='640'
-            height='853'
-            frameborder='0'
-            marginheight='0'
-            marginwidth='0'>
-            Loading…
-         </iframe> */}
-         {/* <iframe
-            className={contactStyles.container}
-            src='about:blank'
-            title='Contact Form'
-            width='100%'
-            height='100%'
-            srcDoc="<form action='https://docs.google.com/forms/u/0/d/e/1FAIpQLSekePWwmvlpIxjDkleo95lzk5nC-pD5Y3p9UjIRwvRbozfycg/formResponse'>
-            <div>
-               <label>
-                  Name:
-                  <input
-                     name='entry.2005620554'
-                     type='text'
-                  />
-               </label>
-               <label>
-                  Email:
-                  <input
-                     name='entry.1045781291'
-                     type='email'
-                  />
-               </label>
-               <label>
-                  Phone:
-                  <input
-                     name='entry.1166974658'
-                     type='phone'
-                  />
-               </label>
-            </div>
-            <div>
-               <label>
-                  Message:
-                  <textarea name='entry.839337160' placeholder='fart'/>
-               </label>
-               <div className={contactStyles.feedback}>
-                  <p>{feedback}</p>
-               </div>
-               <button
-                  type='submit'
-               >
-                  SUBMIT
-               </button>
-            </div>
-         </form>">
-         </iframe> */}
          <div className={contactStyles.container}>
             <form
-            // action='https://docs.google.com/forms/u/0/d/e/1FAIpQLSekePWwmvlpIxjDkleo95lzk5nC-pD5Y3p9UjIRwvRbozfycg/formResponse'
-            >
+               className='contact-form'
+               method='post'
+               action='https://www1.ipage.com/scripts/formemail.html'
+               name='contact-form'>
+               <input type='hidden' name='my_email' value='rickykelleyphotography@gmail.com' />
+               <input type='hidden' name='subject' value='Photography Client Message' />
+               <input
+                  type='hidden'
+                  name='thankyou_url'
+                  value='https://rickykelleyphotography.com/contact'
+               />
+               <input type='hidden' name='order' value='name,email,phone,message' />
                <div>
                   <label>
                      Name:
                      <input
                         value={name}
-                        // name='name'
-                        name='entry.2005620554'
+                        name='name'
                         type='text'
                         onChange={e => setName(e.target.value)}
                      />
@@ -146,7 +85,6 @@ const Contact = () => {
                      <input
                         value={email}
                         name='email'
-                        // name='entry.1045781291'
                         type='email'
                         onChange={e => setEmail(e.target.value)}
                      />
@@ -156,7 +94,6 @@ const Contact = () => {
                      <input
                         value={phone}
                         name='phone'
-                        // name='entry.1166974658'
                         type='phone'
                         onChange={e => setPhone(e.target.value)}
                      />
@@ -168,14 +105,13 @@ const Contact = () => {
                      <textarea
                         value={message}
                         name='message'
-                        // name='entry.839337160'
                         onChange={e => setMessage(e.target.value)}
                      />
                   </label>
                   <div className={contactStyles.feedback}>
                      <p>{feedback}</p>
                   </div>
-                  <button type='submit' onClick={e => buttonClick(e)}>
+                  <button type='button' onClick={() => buttonClick()}>
                      SUBMIT
                   </button>
                </div>
