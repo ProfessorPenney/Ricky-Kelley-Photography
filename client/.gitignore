@@ -10,6 +10,8 @@
 
 # production
 /build
+/public
+/.cache
 
 #dev build
 /.cache
@@ -26,8 +28,4 @@ yarn-debug.log*
 yarn-error.log*
 
 #archived and named pictures
-/src/IMG/portfolio-large
-/src/IMG/portfolio-original
-/src/IMG/portfolio-small
-/src/IMG/landscapes
-/src/IMG/about-original
+/image_archive
